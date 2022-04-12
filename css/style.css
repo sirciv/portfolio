@@ -136,13 +136,29 @@
     text-align:center;
     font-size:1.3em;
   }
-  
+
   #bottom-message{
     color: #1b1b1b;
     position:fixed;
     bottom:20px;
     right:0.5vw;
     font-size: 14px;
+  }
+
+  a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(250, 142, 71);
+    background-color: transparent;
+    text-decoration: underline;
   }
 
   ::selection {
@@ -193,7 +209,7 @@
   .sidebar {
     background-color: #CCE2E1;
     width: 20vw;
-    min-width: 15%;
+    min-width: 15vw;
     display: inline-block;
     height: 100%;
     top: 0;
@@ -211,7 +227,6 @@
   .sidebar_content {
     z-index: 2;
     position: relative;
-    padding: 10px;
     left: 3.8vw;
     top:300px;
     color: #1a1a1a;
