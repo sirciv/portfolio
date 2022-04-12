@@ -20,7 +20,7 @@ var gearlogo = document.getElementById("gearlogo");
 })();
     
 window.addEventListener("optimizedScroll", function() { 
-    let speedAdjust = window.pageYOffset / 20;
+    let speedAdjust = window.pageYOffset / 12;
     gearlogo.style.transform = "rotate("+speedAdjust+"deg)";
 });
 

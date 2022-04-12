@@ -21,7 +21,8 @@
       height: 100vh;
       margin: 0;
       grid-template-columns: 20vw 66vw;
-      grid-template-rows: 200vh;
+      grid-template-rows: 130vh;
+      min-width: 1100px;
       grid-gap: 0vw;
       grid-template-areas:
           "sidebar content-1"
@@ -234,4 +235,22 @@
     font-size: 12pt;
     text-align: left;
     width: 70%;
+  }
+
+
+  /* V. COOL HOVER EFFECT (WIP)*/
+
+  .hide {
+    display: none;
+  }
+  
+  /* .entry:hover + .hide {
+    display: block;
+    color: red;
+  } */
+
+  /* Super important code of the index to work */
+
+  .entry {
+    position: absolute;
   }
