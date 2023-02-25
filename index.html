@@ -24,11 +24,12 @@
         <!-- <meta name="twitter:image" content="x" /> -->
         <meta name="twitter:image:alt"
             content="A screenshot of Spencer's website homepage with many project images stacked all over the screen." />
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <script> 
-            $(function() { alert('hello') });
-            $(function(){
-                $("#sidebar_content").load("sidebar/sidebar_content.html"); 
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#sidebar_content").load("sidebar/sidebar_content.html");
+                });
             });
         </script> 
     </head>
@@ -41,9 +42,10 @@
                     <img src="icons/logo.png" alt id="gearlogo" class="gearlogo_image">
                 </div>
                 <div class="sidebar_margin"></div>
-                <div class="sidebar_content"></div>
+                <div class="sidebar_content"><h4>Let jQuery AJAX Change This Text</h4></div>
             </div>
             <div class="content-1">
+                <button>Load Content</button>
                 <div style="top: 80px; left: 31%; max-width: 250px;" class="entry">
                     <a href="content/mca-world-radio.html">
                     <img alt="" src="images/mca-world-radio/WorldRadio2.jpg"></a></div>
