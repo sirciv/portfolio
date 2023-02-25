@@ -25,11 +25,6 @@
         <meta name="twitter:image:alt"
             content="A screenshot of Spencer's website homepage with many project images stacked all over the screen." />
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-        <script> 
-            $(document).ready(function(){
-                $("#sidebar_content").load("jquery-test.html");
-            });
-        </script> 
     </head>
     <body>
         <div class="container">
@@ -42,6 +37,12 @@
                 <div class="sidebar_margin"></div>
                 <div class="sidebar_content"><h4>Let jQuery AJAX Change This Text</h4></div>
             </div>
+            <!-- JQUERY LOAD EMBEDED -->
+            <script> 
+                $(document).ready(function(){
+                    $("#sidebar_content").load("jquery-test.html");
+                });
+            </script> 
             <div class="content-1">
                 <div style="top: 80px; left: 31%; max-width: 250px;" class="entry">
                     <a href="content/mca-world-radio.html">
@@ -63,7 +64,20 @@
                     <img alt="" src="images/617-haven/haven-21.png"></a></div>     
                 <div style="top: 20px; left: 51%; max-width: 1000px;" class="entry">
                     <a href="content/industrial-design.html">
-                    <img alt="" src="images/industrial-design-winter/portfolio-transparent-31.png"></a></div>                   
+                    <img alt="" src="images/industrial-design-winter/portfolio-transparent-31.png"></a></div>    
+                <!-- JQUERY TEST -->
+                <b>Successful Response (should be blank):</b>
+                <div id="success"></div>
+                <b>Error Response:</b>
+                <div id="error"></div>
+                <script>
+                $( "#success" ).load( "jquery-test.html", function( response, status, xhr ) {
+                    if ( status == "error" ) {
+                        var msg = "Sorry but there was an error: ";
+                        $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+                    }
+                });
+                </script>           
             </div>
             </div>
             <div class="footer">
