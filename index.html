@@ -69,8 +69,9 @@
                 <!-- JQUERY LOAD EMBEDED -->
                 <script> 
                 $( "#sidebar_content" ).load( "sidebar.html", function( response, status, xhr ) {
+                    $("#sidebar_content").enhanceWithin();
                 });
-                </script>          
+                </script>
             </div>
             </div>
             <div class="footer">
