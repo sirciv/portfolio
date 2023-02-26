@@ -2,7 +2,9 @@
 <html lang="en">
     <head>
         <title>Spencer Allan</title>       
-        <link rel="stylesheet" href="css/style.css">
+        <style>
+            @import url('css/style.css');
+        </style>
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -21,9 +23,9 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Spencer Allan">
         <meta name="twitter:description" content="Spencer Allan is a Chicago based designer and writer." />
-        <!-- <meta name="twitter:image" content="x" /> -->
         <meta name="twitter:image:alt"
-            content="A screenshot of Spencer's website homepage with many project images stacked all over the screen." />
+            content="Spencer Allan's website homepage with many project images stacked all over the screen." />
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
@@ -34,44 +36,7 @@
                     <img src="icons/logo.png" alt id="gearlogo" class="gearlogo_image">
                 </div>
                 <div class="sidebar_margin"></div>
-                <div class="sidebar_content">
-                    <table style="width: 100%;" cellpadding="5">
-                    <tbody>
-                        <tr>
-                            <td style="width: 15%;">...</td>
-                            <td style="width: 85%;"><a href="content/about.html">About Me</a></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;">...</td>
-                            <td style="width: 85%;"><a href="content/contact.html">Contact</a></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;"></td>
-                            <td style="width: 85%;"></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;"><img src="icons/plus-41.png"></td>
-                            <td style="width: 85%;"><a href="content/617-haven.html">617 Haven: the "1, 2, 3" House</a></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;"><img src="icons/circle-38.png"></td>
-                            <td style="width: 85%;"><a href="content/tartan-1.html">Tartan Issue 67</a></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;"><img src="icons/circle-38.png"></td>
-                            <td style="width: 85%;"><a href="content/untitled-stanford.html">Untitled Stanford</a></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;"><img src="icons/square-40.png"></td>
-                            <td style="width: 85%;"><a href="content/mca-world-radio.html">MCA World Radio</a></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 15%;"><img src="icons/triangle-39.png"></td>
-                            <td style="width: 85%;"><a href="content/industrial-design.html">Industrial Concepts</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
+                <div id="sidebar_content"></div>
             </div>
             <div class="content-1">
                 <div style="top: 80px; left: 31%; max-width: 250px;" class="entry">
@@ -94,7 +59,13 @@
                     <img alt="" src="images/617-haven/haven-21.png"></a></div>     
                 <div style="top: 20px; left: 51%; max-width: 1000px;" class="entry">
                     <a href="content/industrial-design.html">
-                    <img alt="" src="images/industrial-design-winter/portfolio-transparent-31.png"></a></div>                   
+                    <img alt="" src="images/industrial-design-winter/portfolio-transparent-31.png"></a></div>    
+                <!-- JQUERY LOAD EMBEDED -->
+                <script> 
+                $( "#sidebar_content" ).load( "sidebar.html", function( response, status, xhr ) {
+                    $("#sidebar_content").enhanceWithin();
+                });
+                </script>
             </div>
             </div>
             <div class="footer">
