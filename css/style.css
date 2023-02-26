@@ -225,7 +225,7 @@
     background-color: #F6873D;
   }
 
-  .sidebar_content {
+  #sidebar_content {
     z-index: 2;
     position: relative;
     left: 3.8vw;
@@ -249,7 +249,7 @@
     color: red;
   } */
 
-  /* Super important code of the index to work */
+  /* Super important code for the index to work */
 
   .entry {
     position: absolute;
