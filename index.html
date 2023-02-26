@@ -37,12 +37,6 @@
                 <div class="sidebar_margin"></div>
                 <div class="sidebar_content"></div>
             </div>
-            <!-- JQUERY LOAD EMBEDED -->
-            <script> 
-                $(document).ready(function(){
-                    $("#sidebar_content").load("sidebar.html #sidebar_jquery");
-                });
-            </script> 
             <div class="content-1">
                 <div style="top: 80px; left: 31%; max-width: 250px;" class="entry">
                     <a href="content/mca-world-radio.html">
@@ -71,13 +65,18 @@
                 <b>Error Response:</b>
                 <div id="error"></div>
                 <script>
-                $( "#success" ).load( "jquery-test.html", function( response, status, xhr ) {
+                $( "#success" ).load( "sidebar.html", function( response, status, xhr ) {
                     if ( status == "error" ) {
                         var msg = "Sorry but there was an error: ";
                         $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
                     }
-                }); -->
-                </script>           
+                });
+                </script> -->
+                <!-- JQUERY LOAD EMBEDED -->
+                <script> 
+                    $( "#sidebar_content" ).load( "sidebar.html #sidebar_jquery" );
+                    });
+                </script>          
             </div>
             </div>
             <div class="footer">
