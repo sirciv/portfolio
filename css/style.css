@@ -20,9 +20,8 @@
       width: 100vw;
       height: 100vh;
       margin: 0;
-      grid-template-columns: 20vw 66vw;
+      grid-template-columns: 280px calc(100vw - 280px);
       grid-template-rows: 130vh;
-      min-width: 1100px;
       grid-gap: 0vw;
       grid-template-areas:
           "sidebar content-1"
@@ -51,14 +50,14 @@
       }
 
       .content-3 > img {
-      max-width: 55vw;
+      max-width: 50vw;
       height: auto;
       }
   
   /* II. OTHER STYLES */
   
   body {
-    background-color: #e3eeee;
+    background-color: #eff5f5;
     display: flex;
     justify-content: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -186,7 +185,7 @@
     z-index: 4;
     grid-area: gear;
     position: fixed;
-    width: 20vw;
+    width: 280px;
   }
 
   .top_corner_image
@@ -199,18 +198,18 @@
   .gearlogo_image
   {
     position: absolute;
-    height: 16vw;
+    height: 225px;
     width: auto;
-    top: 3.1vw;
-    left: 3.5vw;
+    top: 44px;
+    left: 44px;
   }
 
   /* IV. SIDEBAR */
 
   .sidebar {
-    background-color: #CCE2E1;
-    width: 20vw;
-    min-width: 15vw;
+    background-color: #dfecec;
+    /* width: 20vw;
+    min-width: 15vw; */
     display: inline-block;
     height: 100%;
     top: 0;
@@ -220,7 +219,7 @@
   .sidebar_margin {
     z-index: 6;
     position: fixed;
-    width: 2.8vw;
+    width: 25px;
     height: 100%;
     background-color: #F6873D;
   }
@@ -237,20 +236,22 @@
     width: 70%;
   }
 
-
-  /* V. COOL HOVER EFFECT (WIP)*/
-
-  .hide {
-    display: none;
-  }
-  
-  /* .entry:hover + .hide {
-    display: block;
-    color: red;
-  } */
-
   /* Super important code for the index to work */
 
   .entry {
     position: absolute;
+  }
+
+  @media (max-width: 1100px) {
+    .container {
+      grid-template-columns: 100vw;
+      grid-template-areas:
+          "sidebar"
+      }
+      .content-1 {
+        display: none;
+      }
+      .sidebar {
+        width: 100% !important;
+      }
   }
