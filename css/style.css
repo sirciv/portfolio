@@ -1,18 +1,13 @@
-  
-  /* Custom Font, saving in case I need later becuase this took FOREVER to figure out */ 
-
-  /* @font-face {
-    font-family: 'AppleGaramond-Italic';
-    src: url('AppleGaramond-Italic.woff2') format('woff2'),
-         url('AppleGaramond-Italic.woff') format('woff'),
-         url('AppleGaramond-Italic.ttf') format('ttf');
-  } */
+      
+   /* spencer's somewhat mediocore but still kickass stylesheet */
+   /* welcome! */
 
    /* I. CSS GRID */
 
       html, body {
         margin: 0;
         padding: 0;
+        overscroll-behavior-y: none;
       }
 
       .container {
@@ -27,7 +22,8 @@
           "sidebar content-1"
       }
 
-      /* The header is basically just being used as padding at this point but saving for later. */
+      /* The header is basically just being used as padding at this point. Who needs headers anyway? */
+
       .header {
       grid-area: header;
       }
@@ -40,19 +36,6 @@
       grid-area: content-1;
       max-width: 100%
       }
-
-      .content-2 {
-      grid-area: content-2;
-      }
-
-      .content-3 {
-      grid-area: content-3;
-      }
-
-      .content-3 > img {
-      max-width: 50vw;
-      height: auto;
-      }
   
   /* II. OTHER STYLES */
   
@@ -64,7 +47,6 @@
   }
 
   h1 {
-    /* font-family: 'AppleGaramond-Italic', Fallback, sans-serif; */
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;
   }
@@ -102,10 +84,7 @@
   img {
     max-width:100%;
     max-height:100%;
-  }
-
-  .sidebar > img {
-    pointer-events: none;
+    /* pointer-events: none; */
   }
 
   .content-1 {
@@ -168,17 +147,6 @@
     background: rgb(250, 142, 71); /* Gecko Browsers */
   }
 
-  /* h3 {
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  } */
-
-  /* h3:hover {
-    cursor:pointer;
-    color: blue;
-  } */
-
   /* III. TOP CORNER (ASTERISK) */
 
   .top_corner {
@@ -188,7 +156,7 @@
     width: 280px;
   }
 
-  .top_corner_image
+  #top_corner_image
   {
     position: relative;
     top: 0;
@@ -208,8 +176,6 @@
 
   .sidebar {
     background-color: #dfecec;
-    /* width: 20vw;
-    min-width: 15vw; */
     display: inline-block;
     height: 100%;
     top: 0;
@@ -227,13 +193,18 @@
   #sidebar_content {
     z-index: 2;
     position: relative;
-    left: 3.8vw;
+    left: 40px;
     top:300px;
     color: #1a1a1a;
     font-family: 'Courier New', Courier, monospace;
     font-size: 12pt;
     text-align: left;
-    width: 70%;
+    width: 80%;
+  }
+
+  #sidebar_content img {
+    max-width: 25px;
+    max-height: auto;
   }
 
   /* Super important code for the index to work */
@@ -242,16 +213,11 @@
     position: absolute;
   }
 
-  @media (max-width: 1100px) {
-    .container {
-      grid-template-columns: 100vw;
-      grid-template-areas:
-          "sidebar"
-      }
-      .content-1 {
-        display: none;
-      }
-      .sidebar {
-        width: 100% !important;
-      }
-  }
+  /* Custom Font, saving in case I need later becuase this took FOREVER to figure out */ 
+
+  /* @font-face {
+    font-family: 'AppleGaramond-Italic';
+    src: url('AppleGaramond-Italic.woff2') format('woff2'),
+         url('AppleGaramond-Italic.woff') format('woff'),
+         url('AppleGaramond-Italic.ttf') format('ttf');
+  } */

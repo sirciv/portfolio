@@ -1,0 +1,32 @@
+ /* MOBILE WRAPPER */
+
+ @media (max-width: 1100px) {
+  .container {
+    grid-template-columns: 100vw;
+    grid-template-areas:
+        "sidebar"
+    }
+  .content-1 {
+    display: none;
+  }
+
+  #top_corner_image {
+    visibility: hidden;
+  }
+
+  .sidebar {
+    width: 100% !important;
+  }
+
+  #sidebar_content {
+    left: 50px;
+  }
+
+  .gearlogo_image {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    bottom: -500px;
+    right: 44px;
+  }
+}
