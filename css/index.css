@@ -19,7 +19,7 @@
   .sidebar {
     width: 100% !important;
     left: 20px;
-    background-color: #eff5f5 !important;
+    background-color: #eff5f5;
   }
 
   #sidebar_content {

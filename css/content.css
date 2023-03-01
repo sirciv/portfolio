@@ -26,11 +26,14 @@ grid-template-areas:
   grid-area: sidebar;
 }
 
+body {
+  padding-left: 10px;
+}
+
 .content-1 {
   grid-area: content-1;
-  max-width: 100%;
-  margin-left: 20px;
-  margin-top: 0;
+  min-width: 100%;
+  margin-top: 53px;
   padding-top: 30px;
   padding-bottom: 50px;
 }
@@ -46,7 +49,6 @@ grid-template-areas:
 }
 
 .sidebar {
-  background-color: #dfecec;
   position: fixed;
   height: 100%;
   width: 280px;
@@ -74,6 +76,7 @@ grid-template-areas:
   
   .container {
     grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
     grid-template-areas:
         "content-1"
         "content-2"
@@ -102,10 +105,10 @@ grid-template-areas:
   }
   
   .content-1 {
-    padding-left: 20px;
+    min-width: 80%;
   }
   
   .content-2 img, video {
-    max-width: 50%;
+    min-width: 80%;
   }
 }
