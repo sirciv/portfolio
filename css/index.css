@@ -1,11 +1,17 @@
  /* MOBILE WRAPPER */
 
  @media (max-width: 1100px) {
+
   .container {
     grid-template-columns: 100vw;
     grid-template-areas:
         "sidebar"
-    }
+  }
+
+  body {
+    background-color: #eff5f5;
+  }
+
   .content-1 {
     display: none;
   }

@@ -4,7 +4,7 @@
 
    /* I. CSS GRID */
 
-      html, body {
+      body {
         margin: 0;
         padding: 0;
         overscroll-behavior-y: none;
