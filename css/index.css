@@ -8,10 +8,6 @@
         "sidebar"
   }
 
-  body {
-    background-color: #eff5f5;
-  }
-
   .content-1 {
     display: none;
   }
@@ -23,6 +19,7 @@
   .sidebar {
     width: 100% !important;
     left: 20px;
+    background-color: #eff5f5 !important;
   }
 
   #sidebar_content {
