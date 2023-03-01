@@ -9,12 +9,13 @@ html, body {
 display: grid;
 width: 100vw;
 height: 100vh;
-grid-template-columns: 20vw 66vw;
-grid-template-rows: 10vh auto;
+grid-template-columns: 300px 65vw;
+grid-template-rows: 4vh 80vh auto;
 grid-gap: 0.5vw;
 grid-template-areas:
     "gear header"
     "sidebar content-1"
+    "sidebar content-2"
 }
 
 .header {
@@ -28,8 +29,20 @@ grid-template-areas:
 .content-1 {
   grid-area: content-1;
   max-width: 100%;
+  margin-left: 20px;
+  margin-top: 0;
+  padding-top: 30px;
   padding-bottom: 50px;
-  padding-left: 15px;
+}
+
+.content-2 {
+  grid-area: content-2;
+  padding-left: 50px;
+  padding-bottom: 75px;
+}
+
+.content-2 img {
+  max-width: 70%;
 }
 
 .sidebar {
@@ -53,29 +66,46 @@ grid-template-areas:
     -ms-user-select: none;
 }
 
+/* content pages mobile wrapper */
+
 @media (max-width: 1100px) {
+
+  /* layout */
   
   .container {
     grid-template-columns: 100vw;
     grid-template-areas:
         "content-1"
+        "content-2"
     }
 
   .sidebar {
-    display: none;
+    visibility: hidden;
   }
+
+  #gearlogo {
+    visibility: visible;
+    position: fixed;
+    scale: 45%;
+    top: -8px !important;
+    left: -15px !important;
+  }
+
+  .sidebar_margin {
+    visibility: visible;
+  }
+
+  /* content wrapping */
 
   body {
-    padding-bottom: 50px;
-    padding-left: 0px;
+    padding-top: 100px;
   }
-
-  p {
-    margin-left: -15%;
-    margin-right: 5%;
+  
+  .content-1 {
+    padding-left: 20px;
   }
-
-  img {
-    min-width: 30px;
+  
+  .content-2 img, video {
+    max-width: 50%;
   }
 }

@@ -16,6 +16,7 @@
 
   .sidebar {
     width: 100% !important;
+    left: 20px;
   }
 
   #sidebar_content {
@@ -27,6 +28,6 @@
     height: 100px;
     width: auto;
     bottom: -500px;
-    right: 44px;
+    left: 50px;
   }
 }
