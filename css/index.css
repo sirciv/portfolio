@@ -1,0 +1,66 @@
+
+/* CSS GRID FOR INDEX */
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  grid-template-columns: 280px calc(100vw - 280px);
+  grid-template-rows: 130vh;
+  grid-gap: 0vw;
+  grid-template-areas:
+      "sidebar content-1"
+}
+
+/* The header is basically just being used as padding at this point. Who needs headers anyway? */
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content-1 {
+  grid-area: content-1;
+  max-width: 100%
+} 
+ 
+ /* MOBILE WRAPPER */
+
+ @media (max-width: 1100px) {
+
+  .container {
+    grid-template-columns: 100vw;
+    grid-template-areas:
+        "sidebar"
+  }
+
+  .content-1 {
+    display: none;
+  }
+
+  #top_corner_image {
+    visibility: hidden;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    left: 20px;
+    background-color: #eff5f5;
+  }
+
+  #sidebar_content {
+    left: 50px;
+  }
+
+  .gearlogo_image {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    bottom: -500px;
+    left: 50px;
+  }
+}

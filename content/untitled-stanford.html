@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Spencer Allan -- Stanford Art Journal</title>       
-        <link rel="stylesheet" href="../css/content.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-        <link rel="manifest" href="../favicon/site.webmanifest">
+        <title>Spencer Allan -- About Me</title>       
+        <style>
+            @import url('../css/style.css');
+            @import url('../css/content.css');
+        </style>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
         <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Spencer Allan's personal website">
         <meta name="author" content="Spencer Allan">
-        <meta name="keywords" content="untitled, Stanford, art history, literary magazine, publication, art, design, code, spencer allan">
+        <meta name="keywords" content="tartan, Highland Park High School, literary magazine, publication, Columbia Scholastic Press Association, art, design, code, spencer allan">
         <meta property="og:title" content="Spencer Allan" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Spencer Allan is a Chicago based designer and writer." />
+        <!-- <meta property="og:image" content="x" /> -->
+        <meta property="og:url" content="https://spencerallan.net" />
+        <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Spencer Allan">
         <meta name="twitter:description" content="Spencer Allan is a Chicago based designer and writer." />
+        <meta name="twitter:image:alt"
+            content="Spencer Allan's website homepage with many project images stacked all over the screen." />
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
-            <div class="back_arrow_box">
-                <a href="../index.html"><img src="../icons/back_arrow.png" alt id="back_arrow"></a>
-            </div>
             <div class="header"></div>
             <div class="sidebar">
-                <div class="sidebar_margin"></div>
-                <div class="sidebar_content">
-                    <h4>Graphic Design</h4>
-                    <h5>Category</h5><br><br>
-                    <h4>4 Weeks</h4>
-                    <h5>Turnaround Time</h5>
+                <div class="top_corner">
+                    <img src="../icons/top_corner.png" id="top_corner_image">
+                    <a href="../index.html"><img src="../icons/back_arrow.svg" id="gearlogo" class="gearlogo_image" style="pointer-events: all;"></a>
                 </div>
+                <div class="sidebar_margin"></div>
+                <div id="sidebar_content"></div>
             </div>
             <div class="content-1">
                 <img src="../images/stanford/stanford-spread-15.jpg">
             </div>
             <div class="content-2">
-                <strong>Stanford Undergraduate Art History Journal</strong>
-            </div>
-            <div class="content-3">
-                <p>A “program” in architecture is a list of things that a building has to include: bathrooms, bedrooms, offices, closets, etc. The challenge of the architect then is figuring out how to squeeze all of these spaces into a compact and cohesive package.<br><br>
-
-                    Publication design is similar. The greatest thrill, and greatest challenge, of designing magazines is figuring out how all of these pieces click together. My personal objective was to not let the text-dense essays overwhelm the actual art, something I did by sampling colors found in the artwork and incorporating them into the spreads themselves.<br><br>
-                    
-                    The folks at Stanford seemed happy with the final product and I’m proud of it too, so here are a few of my favorite spreads!</p>
+                <h2>Stanford Undergraduate Art History Journal</h2><br><br>
+                <p>Sample text</p>
                 <img src="../images/stanford/stanford-spread-12.jpg"><br><br><br>
                 <img src="../images/stanford/stanford-spread-13.jpg"><br><br><br>
                 <img src="../images/stanford/stanford-spread-14.jpg"><br><br><br>
                 <img src="../images/stanford/stanford-spread-16.jpg"><br><br><br>
             </div>
-            <div class="footer">
-                <div>
-                    <a id="bottom-message">(c) spencer allan, 2022. (っ＾▿＾）</a>
-                </div>
+                <!-- SIDEBAR CONTENT WRAPPER -->
+            <script> 
+            $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {
+                $("#sidebar_content").enhanceWithin();
+            });
+            </script>
+        </div>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+    <footer>
+        <div class="footer">
+            <div>
+                <a id="bottom-message">(c) spencer allan, 2023. (っ＾▿＾）</a>
             </div>
         </div>
-    </body>
+    </footer>

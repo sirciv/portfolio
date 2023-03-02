@@ -1,72 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Spencer Allan -- About</title>       
-        <link rel="stylesheet" href="../css/content.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-        <link rel="manifest" href="../favicon/site.webmanifest">
+        <title>Spencer Allan -- About Me</title>       
+        <style>
+            @import url('../css/style.css');
+            @import url('../css/content.css');
+        </style>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
         <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Spencer Allan's personal website">
         <meta name="author" content="Spencer Allan">
-        <meta name="keywords" content="spencer allan, chicago, northwestern, contact, about">
+        <meta name="keywords" content="tartan, Highland Park High School, literary magazine, publication, Columbia Scholastic Press Association, art, design, code, spencer allan">
         <meta property="og:title" content="Spencer Allan" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Spencer Allan is a Chicago based designer and writer." />
+        <!-- <meta property="og:image" content="x" /> -->
+        <meta property="og:url" content="https://spencerallan.net" />
+        <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Spencer Allan">
         <meta name="twitter:description" content="Spencer Allan is a Chicago based designer and writer." />
+        <meta name="twitter:image:alt"
+            content="Spencer Allan's website homepage with many project ../images stacked all over the screen." />
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
-            <div class="back_arrow_box">
-                <a href="../index.html"><img src="../icons/back_arrow.png" alt id="back_arrow"></a>
-            </div>
             <div class="header"></div>
             <div class="sidebar">
-                <div class="sidebar_margin"></div>
-                <div class="sidebar_content">
+                <div class="top_corner">
+                    <img src="../icons/top_corner.png" id="top_corner_image">
+                    <a href="../index.html"><img src="../icons/back_arrow.svg" id="gearlogo" class="gearlogo_image" style="pointer-events: all;"></a>
                 </div>
+                <div class="sidebar_margin"></div>
+                <div id="sidebar_content"></div>
             </div>
             <div class="content-1">
                 <img src="../images/about/IMG_9655.jpg" style="max-width: 40%;" cellpadding="20px">
                 <p style="font-style: italic; font-size: 10pt;">(me, geeking out in cornell's art & architecture library)</p><br>
-                <p>Spencer Allan is Chicago-based interdisciplinary writer and designer studying Journalism, Architectural Engineering Design, and Art, Theory, Practice at Northwestern University. His work focuses on the intersection of art and engineering with storytelling, whether that means reporting a county election in rural Wisconsin, laser cutting an architectural model, or establishing a clothing brand with worldwide clientele. His work has been featured in institutions such as the Museum of Contemporary Art Chicago, and his typewriter collection includes a restored 1966 Hermes 3000 and his great-grandfather’s 1927 Royal Portable. When’s he’s not writing biographies in third person, you can probably find him riding the train around the city.</p>
+            </div>
+            <div class="content-2">
+                <p>Spencer Allan is Chicago-based interdisciplinary writer and designer studying Journalism, Architectural Engineering Design, and Art, Theory, Practice at Northwestern University. His work focuses on the intersection of art and engineering with storytelling, whether that means reporting a county election in rural Wisconsin, laser cutting an architectural model, or establishing a clothing brand with worldwide clientele. His work has been featured in institutions such as the Museum of Contemporary Art Chicago, and his typewriter collection includes a restored 1966 Hermes 3000 and his great-grandfather’s 1927 Royal Portable. When’s he’s not writing biographies in third person, you can probably find him riding the train around the city.</p><br>
                 <p style="font-style: italic;">Besides writing and sketching, I mainly work in...</p>
                 <table style="width: 100%; font-family: 'Courier New', Courier, monospace;">
                     <tbody>
                         <tr>
-                            <td style="width: 4%;"><img src="../images/about/software_icons/Adobe_Photoshop_CC_icon.png"></td>
+                            <td style="width: 5%;"><img src="../images/about/software_icons/Adobe_Photoshop_CC_icon.png"></td>
                             <td style="width: 26%;">Adobe Photoshop CC</a></td>
-                            <td style="width: 4%;"><img src="../images/about/software_icons/revit-icon-400px.png"></td>
-                            <td style="width: 66%;">Autodesk Revit</a></td>
+                            <td style="width: 5%;"><img src="../images/about/software_icons/revit-icon-400px.png"></td>
+                            <td style="width: 26%;">Autodesk Revit</a></td>
                         </tr>
                         <tr>
-                            <td style="width: 4%;"><img src="../images/about/software_icons/Adobe_Illustrator_CC_icon.png"></td>
+                            <td style="width: 5%;"><img src="../images/about/software_icons/Adobe_Illustrator_CC_icon.png"></td>
                             <td style="width: 26%;">Adobe Illustrator CC</a></td>
-                            <td style="width: 4%;"><img src="../images/about/software_icons/rhino-6.png"></td>
-                            <td style="width: 66%;">Rhino 6</a></td>
+                            <td style="width: 5%;"><img src="../images/about/software_icons/rhino.png"></td>
+                            <td style="width: 66%;">Rhino</a></td>
                         </tr>
                         <tr>
-                            <td style="width: 4%;"><img src="../images/about/software_icons/Adobe_InDesign_CC_icon.png"></td>
+                            <td style="width: 5%;"><img src="../images/about/software_icons/Adobe_InDesign_CC_icon.png"></td>
                             <td style="width: 26%;">Adobe InDesign CC</a></td>
-                            <td style="width: 4%;"><img src="../images/about/software_icons/solidworks.png"></td>
-                            <td style="width: 66%;">Solidworks</a></td>
+                            <td style="width: 5%;"><img src="../images/about/software_icons/lumion.svg"></td>
+                            <td style="width: 66%;">Lumion</a></td>
                         </tr>
                     </tbody>
                 </table>
-                <p style="font-style: italic;">...with additional experience in web development, photo/video editing, laser cutting, sewing, service and industrial design methods.</p>
-                <br>
-                <br>
-                <br>
-            </div>
-            </div>
-            <div class="footer">
-                <div>
-                    <a id="bottom-message">(c) spencer allan, 2022. (っ＾▿＾）</a>
-                </div>
+                <p style="font-style: italic;">...with additional experience in web development, photo/video editing, laser cutting, sewing, service and industrial design methods.</p><br>
+                <pre>
+                  .---'-----\        
+     .-----------/           \
+    /           (         ^  |    __
+&   (             \        O  /  / .'
+'._/(              '-'  (.   (_.' /
+    \                    \     ./
+    |    |       |    |/ '._.'
+    )   @).____\|  @ |
+.  /    /       (    | 
+\|, '_:::\  . ..'_:::\ ..\).
+                </pre>
+                <p style="text-decoration: underline;"><script language="JavaScript" type="text/javascript">
+                    var part1 = "spencerallan8";
+                    var part2 = Math.pow(2,6);
+                    var part3 = String.fromCharCode(part2);
+                    var part4 = "gmail.com";
+                    var part5 = part1 + String.fromCharCode(part2) + part4;
+                    document.write("<a href=" + "mai" + "lto" + ":" 
+                    + part5 + ">" + part1 + part3 + part4 + "</a>");
+                </script><br>
+                <a target="_blank" href="https://instagram.com/spencer.allan">instagram</a><br>
+                <a target="_blank" href="https://github.com/sirciv">github</a></p><br><br><br><br>
+                <!-- SIDEBAR CONTENT WRAPPER -->
+                <script> 
+                $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {
+                    $("#sidebar_content").enhanceWithin();
+                });
+                </script>
             </div>
         </div>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
+    <footer>
+        <div class="footer">
+            <div>
+                <a id="bottom-message">(c) spencer allan, 2023. (っ＾▿＾）</a>
+            </div>
+        </div>
+    </footer>

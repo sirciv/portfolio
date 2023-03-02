@@ -1,252 +1,118 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+display: grid;
+width: 100vw;
+height: 100vh;
+grid-template-columns: 300px auto;
+grid-template-rows: 4vh 80vh auto;
+grid-gap: 0.5vw;
+grid-template-areas:
+    "gear header"
+    "sidebar content-1"
+    "sidebar content-2"
+}
+
+.header {
+  grid-area: header;
+}
+
+footer {
+  visibility: hidden;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  position: fixed;
+  height: 100%;
+  width: 280px;
+  top: 0;
+  left: 0;
+}
+
+body {
+  padding-left: 10px;
+}
+
+.content-1 {
+  grid-area: content-1;
+  min-width: 50%;
+  max-width: 80%;
+  margin-top: 53px;
+  padding-top: 30px;
+}
+
+.content-2 {
+  grid-area: content-2;
+  padding: 50px;
+}
+
+.content-2 img {
+  max-width: 70%;
+}
+
+#gearlogo {
+  height: 210px;
+  width: auto;
+  left: 30px;
+  top: 53px;
+  user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* content pages mobile wrapper */
+
+@media (max-width: 1100px) {
+
+  /* layout */
   
-  /* Custom Font */ 
-
-  /* @font-face {
-    font-family: 'AppleGaramond-Italic';
-    src: url('AppleGaramond-Italic.woff2') format('woff2'),
-         url('AppleGaramond-Italic.woff') format('woff'),
-         url('AppleGaramond-Italic.ttf') format('ttf');
-  } */
-
-   /* CSS GRID */
-
-      html, body {
-        margin: 0;
-        padding: 0;
-      }
-
-      .container {
-      display: grid;
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      grid-template-columns: 20vw 66vw;
-      grid-template-rows: 10vh auto auto auto;
-      grid-gap: 0.5vw;
-      grid-template-areas:
-          "gear header"
-          "sidebar content-1"
-          "sidebar content-2"
-          "sidebar content-3"
-      }
-
-      .header {
-      grid-area: header;
-      }
-
-      .sidebar {
-      grid-area: sidebar;
-      }
-
-      .content-1 {
-      grid-area: content-1;
-      max-width: 100%
-      }
-
-      .content-2 {
-      grid-area: content-2;
-      }
-
-      .content-3 {
-      grid-area: content-3;
-      }
-
-      .content-3 > img {
-      max-width: 55vw;
-      height: auto;
-      }
-  
-  /* OTHER STYLES */
-  
-  body {
-    background-color: #e3eeee;
-    display: flex;
-    justify-content: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  }
-
-  h1 {
-    /* font-family: 'AppleGaramond-Italic', Fallback, sans-serif; */
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333333;
-  }
-
-  /* This is for drop quotes. */
-  h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: rgb(88, 138, 81);
-  }
-
-  h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8vw;
-    margin: 0;
-  }
-
-  h5 {
-    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 1vw;
-    font-style: italic;
-    font-weight: 50;
-    margin: 0;
-  }
-
-  p {
-    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 18px;
-    margin-right:40%;
-    margin-bottom: 25px;
-  }
-
-  img {
-    max-width:100%;
-    max-height:100%;
-  }
-
-  .content-1 > img {
-    pointer-events: none;
-  }
-
-  .content-3 > img {
-    pointer-events: none;
-  }
+  .container {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "content-1"
+        "content-2"
+    }
 
   .sidebar {
-    background-color: #CCE2E1;
-    width: 20vw;
+    visibility: hidden;
+  }
+
+  #gearlogo {
+    visibility: visible;
     position: fixed;
-    top: 19.5vw;
-    height: 100%;
-    z-index:0;
+    scale: 45%;
+    top: -8px !important;
+    left: -15px !important;
   }
 
   .sidebar_margin {
-    position: fixed;
-    width: 2.8vw;
-    height: 100%;
-    background-color: #F6873D;
-    z-index: 0.5;
+    visibility: visible;
   }
 
-  .sidebar_content {
-    position: fixed;
-    text-align: center;
-    padding: 10px;
-    top: 22vw;
-    left: 3.8vw;
-    color: #1a1a1a;
+  /* content wrapping */
+
+  body {
+    padding-top: 100px;
   }
   
-  .header {
-    z-index:0;
-  }
-
-  .content-1, .content-2, .content-3 {
-    position: block;
-    color:black;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-top: 40px;
-    padding-bottom: 5px;
-  }
-
-  .content-2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    color: #333333;
-  }
-
-  .content-3 {
-    padding-top: 10px;
-  }
-
-  .back_arrow_box {
-    grid-area: gear;
-    display: flex;
-    position: fixed;
-  }
-
-  #back_arrow {
-    height: auto;
-    width: 20vw;
-    position: fixed;
-    z-index:1;
-    user-select: none;
-      -moz-user-select: none;
-      -webkit-user-drag: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-  }
-
-  #myHeader {
-    height: auto;
-    width: 50vw;
-    position: absolute;
-    bottom: 0px;
-    user-select: none;
-      -moz-user-select: none;
-      -webkit-user-drag: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-  }
-
-  .body{
-    height:2000px;
-    margin:5px auto;
-    width:100%;
-    text-align:center;
-    font-size:1.3em;
+  .content-1 {
+    padding-top: 50px;
+    min-width: 80%;
   }
   
-  #bottom-message{
-    color: #1b1b1b;
-    position:fixed;
-    bottom:20px;
-    right:0.5vw;
-    font-size: 14px;
+  .content-2 img, video {
+    min-width: 80%;
   }
 
-  ::selection {
-    background: rgb(250, 142, 71); /* WebKit/Blink Browsers */
+  p {
+    margin: 0;
   }
-  ::-moz-selection {
-    background: rgb(250, 142, 71); /* Gecko Browsers */
-  }
-
-  /* h3 {
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  } */
-
-  /* h3:hover {
-    cursor:pointer;
-    color: blue;
-  } */
-
-  /* STUFF ONLY ON INDEX */
-
-  .top_corner {
-    grid-area: gear;
-    position: fixed;
-    width: 20vw;
-  }
-
-  .top_corner_image
-  {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-
-  .gearlogo_image
-  {
-    position: absolute;
-    height: 16vw;
-    width: auto;
-    top: 3.1vw;
-    left: 3.5vw;
-  }
+}
