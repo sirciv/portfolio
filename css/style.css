@@ -2,41 +2,14 @@
    /* spencer's somewhat mediocore but still kickass stylesheet */
    /* welcome! */
 
-   /* I. CSS GRID */
-
+   /* I. GLOBAL */
   
   html, body {
     margin: 0;
     padding: 0;
     overscroll-behavior-y: none;
+    overflow-x: initial !important;
     background-color: #eff5f5;
-  }
-
-  .container {
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    grid-template-columns: 280px calc(100vw - 280px);
-    grid-template-rows: 130vh;
-    grid-gap: 0vw;
-    grid-template-areas:
-        "sidebar content-1"
-  }
-
-  /* The header is basically just being used as padding at this point. Who needs headers anyway? */
-
-  .header {
-    grid-area: header;
-  }
-
-  .sidebar {
-    grid-area: sidebar;
-  }
-
-  .content-1 {
-    grid-area: content-1;
-    max-width: 100%
   }
   
   /* II. OTHER STYLES */
@@ -52,8 +25,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;
   }
-
-  /* This is for drop quotes. */
+  
   h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
@@ -81,12 +53,17 @@
     font-size: 18px;
     margin-right:40%;
     margin-bottom: 25px;
+    line-height: 1.5rem;
   }
 
   img {
     max-width:100%;
     max-height:100%;
-    /* pointer-events: none; */
+    user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-drag: none;
   }
 
   .content-1 {
@@ -96,6 +73,11 @@
     margin-right: 50px;
     padding-top: 40px;
     padding-bottom: 5px;
+  }
+
+  .content-2 img {
+    margin-bottom: 25px;
+    margin-top: 25px;
   }
 
   #myHeader {
