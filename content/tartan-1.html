@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Spencer Allan -- About Me</title>       
+        <title>Spencer Allan -- Tartan Issue 67</title>       
         <style>
             @import url('../css/style.css');
             @import url('../css/content.css');
+            @import url('../photoswipe/dist/photoswipe.css');
         </style>
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <!-- <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"> -->
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-        <link rel="manifest" href="favicon/site.webmanifest">
+        <!-- <link rel="manifest" href="favicon/site.webmanifest"> -->
         <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +28,15 @@
         <meta name="twitter:image:alt"
             content="Spencer Allan's website homepage with many project images stacked all over the screen." />
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script type="module">
+            import PhotoSwipeLightbox from '../photoswipe/dist/photoswipe-lightbox.esm.js';
+            const lightbox = new PhotoSwipeLightbox({
+                gallery: '#my-gallery',
+                children: 'a',
+                pswpModule: () => import('../photoswipe/dist/photoswipe.esm.js')
+                });
+            lightbox.init();
+        </script>
     </head>
     <body>
         <div class="container">
@@ -57,16 +67,30 @@
                     I also scanned a copy of one of the promotional posters that I had made to promote submissions, I think it’s really fun to see with all the crumples and approvals and what-not.
                 </p>
                 <img src="../images/tartan/new-tartan-20.png">
-            </div>
+                
+                <div class="pswp-gallery" id="my-gallery">
+                    <a href="../images/tartan/new-tartan-26.jpg" 
+                    data-pswp-width="2551" 
+                    data-pswp-height="1651" 
+                    rel="external"
+                    target="_blank">
+                    <img src="../images/tartan/new-tartan-26.jpg" alt="" />
+                    </a>
+                    <a href="../images/tartan/new-tartan-26.jpg" 
+                    data-pswp-width="10000" 
+                    data-pswp-height="10000" 
+                    rel="external"
+                    target="_blank">
+                    <img src="../images/tartan/new-tartan-26.jpg" alt="" />
+                    </a>
+                </div>
                 <!-- SIDEBAR CONTENT WRAPPER -->
                 <script> 
                 $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {
-                    $("#sidebar_content").enhanceWithin();
+                    // $("#sidebar_content").enhanceWithin();
                 });
                 </script>
-            </div>
         </div>
-        <script type="text/javascript" src="js/index.js"></script>
     </body>
     <footer>
         <div class="footer">
