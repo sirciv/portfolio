@@ -57,14 +57,14 @@
   }
 
   img {
-    max-width:100%;
-    max-height:100%;
     user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
       -webkit-user-drag: none;
   }
+
+  /* Do not be cheeky and try modifying this global image tag. You will break the website. */
 
   .content-1 {
     position: block;
@@ -73,6 +73,11 @@
     margin-right: 50px;
     padding-top: 40px;
     padding-bottom: 5px;
+  }
+
+  .content-1 img {
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .content-2 img {
@@ -145,6 +150,8 @@
     position: relative;
     top: 0;
     left: 0;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .gearlogo_image

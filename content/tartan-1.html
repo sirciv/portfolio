@@ -31,7 +31,7 @@
         <script type="module">
             import PhotoSwipeLightbox from '../photoswipe/dist/photoswipe-lightbox.esm.js';
             const lightbox = new PhotoSwipeLightbox({
-                gallery: '#my-gallery',
+                gallery: '#gallery',
                 children: 'a',
                 pswpModule: () => import('../photoswipe/dist/photoswipe.esm.js')
                 });
@@ -68,22 +68,40 @@
                 </p>
                 <img src="../images/tartan/new-tartan-20.png">
                 
-                <div class="pswp-gallery" id="my-gallery">
-                    <a href="../images/tartan/new-tartan-26.jpg" 
-                    data-pswp-width="2551" 
-                    data-pswp-height="1651" 
-                    rel="external"
-                    target="_blank">
-                    <img src="../images/tartan/new-tartan-26.jpg" alt="" />
+                <div class="pswp-gallery" id="gallery">
+                    <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+                      data-pswp-width="1875"
+                      data-pswp-height="2500"
+                      target="_blank"
+                    >
+                      <img
+                        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
+                        alt=""
+                      />
                     </a>
-                    <a href="../images/tartan/new-tartan-26.jpg" 
-                    data-pswp-width="10000" 
-                    data-pswp-height="10000" 
-                    rel="external"
-                    target="_blank">
-                    <img src="../images/tartan/new-tartan-26.jpg" alt="" />
+                    <a
+                      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+                      data-pswp-width="1669"
+                      data-pswp-height="2500"
+                      target="_blank"
+                    >
+                      <img
+                        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
+                        alt=""
+                      />
                     </a>
-                </div>
+                    <a
+                      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+                      data-pswp-width="2500"
+                      data-pswp-height="1666"
+                      target="_blank"
+                    >
+                      <img
+                        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
                 <!-- SIDEBAR CONTENT WRAPPER -->
                 <script> 
                 $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {
