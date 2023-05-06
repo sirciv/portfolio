@@ -9,20 +9,17 @@ display: grid;
 width: 100vw;
 height: 100vh;
 grid-template-columns: 300px auto;
-grid-template-rows: 4vh 80vh auto;
+grid-template-rows: 4vh auto auto auto;
 grid-gap: 0.5vw;
 grid-template-areas:
     "gear header"
     "sidebar content-1"
+    "sidebar title"
     "sidebar content-2"
 }
 
 .header {
   grid-area: header;
-}
-
-footer {
-  visibility: hidden;
 }
 
 .sidebar {
@@ -40,15 +37,27 @@ body {
 
 .content-1 {
   grid-area: content-1;
-  min-width: 50%;
-  max-width: 80%;
+  max-width: 65%;
   margin-top: 53px;
   padding-top: 30px;
 }
 
+.title {
+  grid-area: title;
+  max-height: 10vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+}
+
 .content-2 {
   grid-area: content-2;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top:20px;
+  padding-bottom: 100px;
 }
 
 .content-2 img {
@@ -79,9 +88,10 @@ table img {
   
   .container {
     grid-template-columns: 100vw;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "content-1"
+        "title"
         "content-2"
     }
 
@@ -112,11 +122,19 @@ table img {
     min-width: 80%;
   }
   
+  .content-2 {
+    padding-top: 75px;
+  }
+
   .content-2 img, video {
     min-width: 80%;
   }
 
   p {
     margin: 0;
+  }
+
+  footer {
+    visibility: hidden;
   }
 }

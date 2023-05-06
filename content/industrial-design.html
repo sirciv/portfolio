@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Spencer Allan -- About Me</title>       
+        <title>Spencer Allan -- Industrial Design Concepts</title>       
         <style>
             @import url('../css/style.css');
             @import url('../css/content.css');
+            @import url('../photoswipe/dist/photoswipe.css');
         </style>
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-        <link rel="manifest" href="favicon/site.webmanifest">
+        <!-- <link rel="manifest" href="favicon/site.webmanifest"> -->
         <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Spencer Allan's personal website">
         <meta name="author" content="Spencer Allan">
-        <meta name="keywords" content="tartan, Highland Park High School, literary magazine, publication, Columbia Scholastic Press Association, art, design, code, spencer allan">
+        <meta name="keywords" content="Holderfield, Segal Design, Northwestern, art, design, code, spencer allan">
         <meta property="og:title" content="Spencer Allan" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Spencer Allan is a Chicago based designer and writer." />
@@ -27,38 +28,94 @@
         <meta name="twitter:image:alt"
             content="Spencer Allan's website homepage with many project images stacked all over the screen." />
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script type="module" src="../js/gallery.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="header"></div>
             <div class="sidebar">
                 <div class="top_corner">
-                    <img src="../icons/top_corner.png" id="top_corner_image">
+                    <img src="../icons/top_corner.svg" id="top_corner_image">
                     <a href="../index.html"><img src="../icons/back_arrow.svg" id="gearlogo" class="gearlogo_image" style="pointer-events: all;"></a>
                 </div>
                 <div class="sidebar_margin"></div>
                 <div id="sidebar_content"></div>
             </div>
-            <div class="content-1">
-                <img src="../images/industrial-design-winter/portfolioMockups-31.jpg">
+            <div class="content-1" style="max-height: 60vh;">
+                <div class="pswp-gallery" id="gallery">
+                    <div class="pswp-gallery__item">
+                        <a  
+                          href="../images/industrial-design-winter/portfolio-transparent-31.png" 
+                          data-pswp-width="2593" 
+                          data-pswp-height="1728" 
+                          target="_blank">
+                          <img src="../images/industrial-design-winter/portfolio-transparent-31.png" alt="Array of images showing World Radio, a vintage orange AM radio turned conceptual product."/>
+                        </a>
+                        <div class="pswp-caption-content">A partial collage of project ideas generated over the season.</div>
+                    </div>
+                </div>
             </div>
-            <div class="content-2">
-                    <h2>Industrial Design Concepts, Winter 2022</h2>
-                    <h3>Design</h3>
-                    <br><br>
-                    <img src="../images/industrial-design-winter/portfolioMockups-36.jpg"><br><br>
-                    <img src="../images/industrial-design-winter/portfolioMockups-34.jpg"><br><br>
-                    <img src="../images/industrial-design-winter/portfolioMockups-35.jpg"><br><br>
-                    <img src="../images/industrial-design-winter/portfolioMockups-33.jpg"><br><br>
+            <div class="title">
+                <h2>Industrial Design Concepts - Winter 2022</h2><br>
+                <table>
+                    <tr>
+                        <td style="width: 12%; "><img src="../icons/triangle-39.png"></td>
+                        <td style="width: 85%;">Industrial Design</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content-2" style="min-width: 80%;">
+                <p>Below are a few of my favorite projects created at the Segal Design Institute. Most of these were rapidly generated, usually in a couple of hours, based on a variety of user needs</p>
+                <div class="pswp-gallery" id="gallery">
+                    <div class="pswp-gallery__item">
+                        <a  
+                          href="../images/industrial-design-winter/portfolioMockups-36.jpg"
+                          data-pswp-width="2593" 
+                          data-pswp-height="1728" 
+                          target="_blank">
+                          <img src="../images/industrial-design-winter/portfolioMockups-36.jpg"/>
+                        </a>
+                        <div class="pswp-caption-content">Organic design for a campus bus stop.</div>
+                    </div>
+                    <div class="pswp-gallery__item">
+                        <a  
+                          href="../images/industrial-design-winter/portfolioMockups-35.jpg" 
+                          data-pswp-width="2593" 
+                          data-pswp-height="1728" 
+                          target="_blank">
+                          <img src="../images/industrial-design-winter/portfolioMockups-35.jpg"/>
+                        </a>
+                        <div class="pswp-caption-content">Design for a bag that meant to hold a standard NAQT Quiz Bowl computer</div>
+                    </div>
+                    <div class="pswp-gallery__item">
+                        <a  
+                          href="../images/industrial-design-winter/portfolioMockups-33.jpg"
+                          data-pswp-width="2593" 
+                          data-pswp-height="1728" 
+                          target="_blank">
+                          <img src="../images/industrial-design-winter/portfolioMockups-33.jpg"/>
+                        </a>
+                        <div class="pswp-caption-content">Amp-inspired design for a portable Bluetooth speaker</div>
+                    </div>
+                    <div class="pswp-gallery__item">
+                        <a  
+                          href="../images/industrial-design-winter/portfolioMockups-34.jpg"
+                          data-pswp-width="2593" 
+                          data-pswp-height="1728" 
+                          target="_blank">
+                          <img src="../images/industrial-design-winter/portfolioMockups-34.jpg"/>
+                        </a>
+                        <div class="pswp-caption-content">Design for a hybrid sneaker/snowshoe</div>
+                    </div>
+                </div>
             </div>
             <!-- SIDEBAR CONTENT WRAPPER -->
             <script> 
             $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {
-                $("#sidebar_content").enhanceWithin();
+                // $("#sidebar_content").enhanceWithin();
             });
             </script>
         </div>
-        <script type="text/javascript" src="js/index.js"></script>
     </body>
     <footer>
         <div class="footer">

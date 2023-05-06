@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Spencer Allan -- About Me</title>       
+        <title>Spencer Allan -- Untitled Stanford</title>       
         <style>
             @import url('../css/style.css');
             @import url('../css/content.css');
+            @import url('../photoswipe/dist/photoswipe.css');
         </style>
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -25,30 +26,84 @@
         <meta name="twitter:title" content="Spencer Allan">
         <meta name="twitter:description" content="Spencer Allan is a Chicago based designer and writer." />
         <meta name="twitter:image:alt"
-            content="Spencer Allan's website homepage with many project images stacked all over the screen." />
+            content="Spencer Allan project archive" />
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script type="module" src="../js/gallery.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="header"></div>
             <div class="sidebar">
                 <div class="top_corner">
-                    <img src="../icons/top_corner.png" id="top_corner_image">
+                    <img src="../icons/top_corner.svg" id="top_corner_image">
                     <a href="../index.html"><img src="../icons/back_arrow.svg" id="gearlogo" class="gearlogo_image" style="pointer-events: all;"></a>
                 </div>
                 <div class="sidebar_margin"></div>
                 <div id="sidebar_content"></div>
             </div>
             <div class="content-1">
-                <img src="../images/stanford/stanford-spread-15.jpg">
+                <div class="pswp-gallery" id="gallery">
+                    <div class="pswp-gallery__item">
+                        <a  
+                          href="../images/stanford/stanford-spread-15.jpg" 
+                          data-pswp-width="2551" 
+                          data-pswp-height="1651" 
+                          target="_blank">
+                          <img src="../images/stanford/stanford-spread-15.jpg" alt="Covers of the Tartan Deconstructed"/>
+                        </a>
+                        <div class="pswp-caption-content"><b>Lorem ipsum dolor (1933)</b><br>Color photograph<br>12 x 10</div>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <h2>Stanford Undergraduate Art History Journal</h2><br>
+                <table>
+                    <tr>
+                        <td style="width: 12%; "><img src="../icons/circle-38.png"></td>
+                        <td style="width: 85%;">Graphic & Publication Design</td>
+                    </tr>
+                </table>
             </div>
             <div class="content-2">
-                <h2>Stanford Undergraduate Art History Journal</h2><br><br>
-                <p>Sample text</p>
-                <img src="../images/stanford/stanford-spread-12.jpg"><br><br><br>
-                <img src="../images/stanford/stanford-spread-13.jpg"><br><br><br>
-                <img src="../images/stanford/stanford-spread-14.jpg"><br><br><br>
-                <img src="../images/stanford/stanford-spread-16.jpg"><br><br><br>
+                <p>I designed these spreads for Stanford University’s art history department, which published a small magazine featuring student’s research and writing. Academic content can be dense, so my focus with the magazine was to let the featured art breath as much as possible. A common trick I used was sampling colors from the artwork itself, which helped the spreads be minimal yet immersive. Between each piece is a poem in five parts, only resolving at the zine’s final acknowledgments.</p>
+                <div class="pswp-gallery" id="gallery">
+                    <div class="pswp-gallery__item">
+                        <a  
+                            href="../images/stanford/stanford-spread-12.jpg" 
+                            data-pswp-width="2551" 
+                            data-pswp-height="1651" 
+                            target="_blank">
+                            <img src="../images/stanford/stanford-spread-12.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pswp-gallery__item">
+                        <a  
+                            href="../images/stanford/stanford-spread-13.jpg" 
+                            data-pswp-width="2551" 
+                            data-pswp-height="1651" 
+                            target="_blank">
+                            <img src="../images/stanford/stanford-spread-13.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pswp-gallery__item">
+                        <a  
+                            href="../images/stanford/stanford-spread-14.jpg" 
+                            data-pswp-width="2551" 
+                            data-pswp-height="1651" 
+                            target="_blank">
+                            <img src="../images/stanford/stanford-spread-14.jpg"/>
+                        </a>
+                    </div>
+                    <div class="pswp-gallery__item">
+                        <a  
+                            href="../images/stanford/stanford-spread-16.jpg" 
+                            data-pswp-width="2551" 
+                            data-pswp-height="1651" 
+                            target="_blank">
+                            <img src="../images/stanford/stanford-spread-16.jpg"/>
+                        </a>
+                    </div>
+                </div>
             </div>
                 <!-- SIDEBAR CONTENT WRAPPER -->
             <script> 

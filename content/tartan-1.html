@@ -19,96 +19,113 @@
         <meta name="keywords" content="tartan, Highland Park High School, literary magazine, publication, Columbia Scholastic Press Association, art, design, code, spencer allan">
         <meta property="og:title" content="Spencer Allan" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="Spencer Allan is a Chicago based designer and writer." />
-        <!-- <meta property="og:image" content="x" /> -->
+        <meta property="og:description" content="Spencer Allan is a Chicago-based designer and writer." />
         <meta property="og:url" content="https://spencerallan.net" />
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Spencer Allan">
-        <meta name="twitter:description" content="Spencer Allan is a Chicago based designer and writer." />
+        <meta name="twitter:description" content="Spencer Allan is a Chicago-based designer and writer." />
         <meta name="twitter:image:alt"
             content="Spencer Allan's website homepage with many project images stacked all over the screen." />
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-        <script type="module">
-            import PhotoSwipeLightbox from '../photoswipe/dist/photoswipe-lightbox.esm.js';
-            const lightbox = new PhotoSwipeLightbox({
-                gallery: '#gallery',
-                children: 'a',
-                pswpModule: () => import('../photoswipe/dist/photoswipe.esm.js')
-                });
-            lightbox.init();
-        </script>
+        <script type="module" src="../js/gallery.js"></script>
     </head>
     <body>
+        <!-- SIDEBAR CONTENT WRAPPER -->
         <div class="container">
             <div class="header"></div>
             <div class="sidebar">
                 <div class="top_corner">
-                    <img src="../icons/top_corner.png" id="top_corner_image">
+                    <img src="../icons/top_corner.svg" id="top_corner_image">
                     <a href="../index.html"><img src="../icons/back_arrow.svg" id="gearlogo" class="gearlogo_image" style="pointer-events: all;"></a>
                 </div>
                 <div class="sidebar_margin"></div>
                 <div id="sidebar_content"></div>
             </div>
             <div class="content-1">
-                <img src="../images/tartan/tartan-covers.png">
+                <div class="pswp-gallery" id="gallery">
+                    <div class="pswp-gallery__item">
+                        <a  
+                          href="../images/tartan/tartan-covers.png" 
+                          data-pswp-width="3909" 
+                          data-pswp-height="1651" 
+                          target="_blank">
+                          <img src="../images/tartan/tartan-covers.png" alt="Covers of the Tartan Deconstructed"/>
+                        </a>
+                        <div class="pswp-caption-content">The cover of the Tartan is "deconstructed" as you flip through the magazine. This was inspired by the proof marks used by printers in the publication process.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <h2>Tartan Literary & Arts Magazine Issue 67</h2><br>
+                <table>
+                    <tr>
+                        <td style="width: 12%; "><img src="../icons/circle-38.png"></td>
+                        <td style="width: 85%;">Graphic & Publication Design</td>
+                    </tr>
+                </table>
             </div>
             <div class="content-2">
-                <h2>Tartan Literary & Arts Magazine Issue 67</h2><br><br>
-                <p>This is the third (and my personal favorite) issue of the Tartan that I worked on. And at less than 50 pages, it’s also relatively compact in its focus on quality over quantity. It brims with ideas— from layered cover that “deconstructs” as you flip through the magazine to its really graceful variations on form and color. In this issue, art becomes just as much a part of the story as the content. We tried to piece together visuals and text that shared a common theme or outlook, the result being an issue that touches on many themes like the importance of family, the crises of self-identity, and the beauty of Planet Earth.<br><br>
+                <p>This is the third and final issue of the Tartan that I designed. Completed just before I moved to Chicago, I was thinking a lot at the time about transition, and that became the informal theme of the magazine. The design of the cover “deconstructs” as you flip through the magazine and there is a gradual transition in the design of the spreads from light to dark.<br><br>
 
-                    Looking back at this issue now, what I cherish most is seeing my friends’ names across all of the pages. This final issue that I worked on was, in many ways, a parting gift to all the wonderful and creative people in my live before they headed off to college.<br><br>
+                    In this issue, art became just as much a part of the story as the writing (previous issues had been printed mostly in black and white). We pieced together visuals and text that shared a common theme or outlook, the result being an issue that touches on themes like the importance of family, the crises of self-identity, and the beauty of Planet Earth.<br><br>
                     
-                    A month after publication, the Tartan was awarded a Silver Crown by the Columbia Scholastic Press Association, one of its highest honors bestowed, for “overall excellence.”</p><br><br>
-                <img src="../images/tartan/new-tartan-17.png">
-                <img src="../images/tartan/new-tartan-19.jpg">
-                <img src="../images/tartan/new-tartan-26.jpg">
-                <p>I’m not sure how this idea popped into my head, but one day I asked my staff to share their favorite Pantone color. I took all of the colors submitted and displayed it next to the staff credits, a really fun tribute to all the different backgrounds and perspectives that informed the creation of the magazine (if you’ve poked around long enough on this website my favorite color shouldn’t be too surprising).<br><br>
-
-                    I also scanned a copy of one of the promotional posters that I had made to promote submissions, I think it’s really fun to see with all the crumples and approvals and what-not.
-                </p>
-                <img src="../images/tartan/new-tartan-20.png">
-                
-                <div class="pswp-gallery" id="gallery">
-                    <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
-                      data-pswp-width="1875"
-                      data-pswp-height="2500"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
-                        alt=""
-                      />
-                    </a>
-                    <a
-                      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-                      data-pswp-width="1669"
-                      data-pswp-height="2500"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-                        alt=""
-                      />
-                    </a>
-                    <a
-                      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
-                      data-pswp-width="2500"
-                      data-pswp-height="1666"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                <!-- SIDEBAR CONTENT WRAPPER -->
-                <script> 
-                $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {
-                    // $("#sidebar_content").enhanceWithin();
-                });
-                </script>
+                    A month after publication, the Tartan was awarded a Silver Crown by the Columbia Scholastic Press Association, one of its highest honors bestowed, for overall excellence.</p>
+                    <div class="pswp-gallery" id="gallery">
+                        <div class="pswp-gallery__item" style="width: 50vw; min-width: 400px;">
+                            <a  
+                              href="../images/tartan/tartan_poster.jpg" 
+                              data-pswp-width="757" 
+                              data-pswp-height="982" 
+                              target="_blank">
+                              <img src="../images/tartan/tartan_poster.jpg">
+                            </a>
+                            <p style="font-style:oblique">^ Promotional Poster, 2019</p>
+                        </div>
+                        <p>Below are selected spreads from the final publication.</p>
+                        <div class="pswp-gallery__item">
+                            <a  
+                              href="../images/tartan/new-tartan-17.png" 
+                              data-pswp-width="2551"  
+                              data-pswp-height="1651" 
+                              target="_blank">
+                              <img src="../images/tartan/new-tartan-17.png">
+                            </a>
+                        </div>
+                        <div class="pswp-gallery__item">
+                            <a  
+                              href="../images/tartan/new-tartan-18.jpg" 
+                              data-pswp-width="2551"  
+                              data-pswp-height="1651" 
+                              target="_blank">
+                              <img src="../images/tartan/new-tartan-18.jpg">
+                            </a>
+                        </div>
+                        <div class="pswp-gallery__item">
+                            <a  
+                              href="../images/tartan/new-tartan-19.jpg"
+                              data-pswp-width="2551" 
+                              data-pswp-height="1651" 
+                              target="_blank">
+                              <img src="../images/tartan/new-tartan-19.jpg">
+                            </a>
+                        </div>
+                        <div class="pswp-gallery__item">
+                            <a  
+                              href="../images/tartan/new-tartan-26.jpg" 
+                              data-pswp-width="2551" 
+                              data-pswp-height="1651" 
+                              target="_blank">
+                              <img src="../images/tartan/new-tartan-26.jpg">
+                            </a>
+                        </div>
+                    </div>
+            </div>
         </div>
+        <script> 
+            $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {
+                // $("#sidebar_content").enhanceWithin();
+            });
+        </script>
     </body>
     <footer>
         <div class="footer">

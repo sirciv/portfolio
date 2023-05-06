@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Spencer Allan -- About Me</title>       
+        <title>Spencer Allan -- World Radio</title>       
         <style>
             @import url('../css/style.css');
             @import url('../css/content.css');
+            @import url('../photoswipe/dist/photoswipe.css');
         </style>
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -27,23 +28,48 @@
         <meta name="twitter:image:alt"
             content="Spencer Allan's website homepage with many project images stacked all over the screen." />
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script type="module" src="../js/gallery.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="header"></div>
             <div class="sidebar">
                 <div class="top_corner">
-                    <img src="../icons/top_corner.png" id="top_corner_image">
+                    <img src="../icons/top_corner.svg" id="top_corner_image">
                     <a href="../index.html"><img src="../icons/back_arrow.svg" id="gearlogo" class="gearlogo_image" style="pointer-events: all;"></a>
                 </div>
                 <div class="sidebar_margin"></div>
                 <div id="sidebar_content"></div>
             </div>
             <div class="content-1">
-                <img src="../images/mca-world-radio/radio-cover-37.jpg">
+                <div class="pswp-gallery" id="gallery">
+                    <div class="pswp-gallery__item">
+                        <a  
+                          href="../images/mca-world-radio/radio-cover-37.jpg" 
+                          data-pswp-width="2593" 
+                          data-pswp-height="1728" 
+                          target="_blank">
+                          <img src="../images/mca-world-radio/radio-cover-37.jpg" alt="Array of images showing World Radio, a vintage orange AM radio turned conceptual product."/>
+                        </a>
+                        <div class="pswp-caption-content">World Radio, a vintage AM radio turned sculpture and conceptual product.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <h2>World Radio c/o Virgil Abloh</h2><br>
+                <table>
+                    <tr>
+                        <td style="width: 12%; "><img src="../icons/square-40.png"></td>
+                        <td style="width: 85%;">Artwork</td>
+                    </tr>
+                </table>
             </div>
             <div class="content-2">
-                <h2>World Radio c/o Virgil Abloh</h2><br><br>
+                <p>I found World Radio in the back of a thrift store in Waco. At the time it was broken and most-definitely-not-worldly, but it would eventually house an idea I had inspired by the AM “border blaster” stations across the Rio Grande.<br><br>
+
+                    A few months later the project caught the attention of Virgil Abloh who featured it in his Figures of Speech career retrospective organized by the Museum of Contemporary Art Chicago. I’m forever grateful to Virgil for this experience and am honored to be a thread in the long fabric of his legacy.<br><br>
+                    
+                    Here’s the original submission text for the project:</p>
                 <p><1: INSPIRATION> When I saw Mr. Abloh’s prompt, my mind drifted to a broken transistor radio from the 1950’s that I bought from a thrift store. I was captivated by the design, yet, an AM radio didn’t have much use in the era of the internet, so I got to work trying to reinterpret the obsolete in modernity.<br><br>
 
                     <2: PRODUCT> World Radio is the product. It connects to the internet and uses its API to scan for thousands of stations across the world. The tuner doesn’t control the frequency, but rather the location, allowing a listener to drop in on random broadcasts from Chicago, Los Angeles, New York, London, Rome, Moscow, and Tokyo with just the turn of a dial.<br><br>
@@ -69,7 +95,6 @@
             });
             </script>
         </div>
-        <script type="text/javascript" src="js/index.js"></script>
     </body>
     <footer>
         <div class="footer">
