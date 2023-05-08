@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spencer Allan -- Tartan Issue 66</title>       
+        <style>
+            @import url('../css/style.css');
+            @import url('../css/content.css');
+            @import url('../photoswipe/dist/photoswipe.css');
+        </style>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Spencer Allan's personal website">
+        <meta name="author" content="Spencer Allan">
+        <meta name="keywords" content="tartan, Highland Park High School, literary magazine, publication, Columbia Scholastic Press Association, art, design, code, spencer allan">
+        <meta property="og:title" content="Spencer Allan" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Spencer Allan is a Chicago-based designer and writer." />
+        <meta property="og:url" content="https://spencerallan.net" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Spencer Allan">
+        <meta name="twitter:description" content="Spencer Allan is a Chicago-based designer and writer." />
+        <meta name="twitter:image:alt"
+            content="Spencer Allan's website homepage with many project images stacked all over the screen." />
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script type="module" src="../js/gallery.js"></script>
+    </head>
+    <body>
+        <!-- SIDEBAR CONTENT WRAPPER -->
+        <div class="container">
+            <div class="header"></div>
+            <div class="sidebar">
+                <div class="top_corner">
+                    <img src="../icons/top_corner.svg" id="top_corner_image">
+                    <a href="../index.html"><img src="../icons/back_arrow.svg" id="gearlogo" class="gearlogo_image" style="pointer-events: all;"></a>
+                </div>
+                <div class="sidebar_margin"></div>
+                <div id="sidebar_content"></div>
+            </div>
+            <div class="content-1">
+                <div class="pswp-gallery" id="gallery">
+                    <div class="pswp-gallery__item" style="width: 30vw; min-width: 400px;">
+                        <a  
+                          href="../images/tartan/tartan-1-1.jpg" 
+                          data-pswp-width="2550" 
+                          data-pswp-height="2550"
+                          target="_blank">
+                          <img src="../images/tartan/tartan-1-1.jpg"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <h2>Tartan Literary & Arts Magazine Issue 66</h2><br>
+                <table>
+                    <tr>
+                        <td style="width: 12%; "><img src="../icons/circle-38.png"></td>
+                        <td style="width: 85%;">Graphic & Publication Design</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content-2">
+                <p>I spent my early years of design experience laying out spreads for community magazines around Dallas. The Tartan's 66th Annual Issue was the first publication where I had the opportunity to exercise full creative control and work with a budget. To put more money towards printing additional full-color spreads, we made the decision to forego mailing the zines and instead hand-delivered each issue from the back of my Jeep Wrangler.<br><br>
+
+                    Below are selected spreads from the final publication.</p>
+                    <div class="pswp-gallery" id="gallery">
+                        <div class="pswp-gallery__item">
+                            <a  
+                              href="../images/tartan/tartan-1-2.jpg"
+                              data-pswp-width="2550" 
+                              data-pswp-height="1275" 
+                              target="_blank">
+                              <img src="../images/tartan/tartan-1-2.jpg">
+                            </a>
+                        </div>
+                        <div class="pswp-gallery__item">
+                            <a  
+                              href="../images/tartan/tartan-1-3.jpg" 
+                              data-pswp-width="2550"  
+                              data-pswp-height="1275" 
+                              target="_blank">
+                              <img src="../images/tartan/tartan-1-3.jpg">
+                            </a>
+                        </div>
+                        <div class="pswp-gallery__item">
+                            <a  
+                              href="../images/tartan/tartan-1-4.jpg" 
+                              data-pswp-width="2550"  
+                              data-pswp-height="1275" 
+                              target="_blank">
+                              <img src="../images/tartan/tartan-1-4.jpg">
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script> 
+            $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {
+                // $("#sidebar_content").enhanceWithin();
+            });
+        </script>
+    </body>
+    <footer>
+        <div class="footer">
+            <div>
+                <a id="bottom-message">(c) spencer allan, 2023. (っ＾▿＾）</a>
+            </div>
+        </div>
+    </footer>

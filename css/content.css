@@ -25,18 +25,13 @@ grid-template-areas:
 .sidebar {
   grid-area: sidebar;
   position: fixed;
-  height: 100%;
+  display: inline-block;
   width: 280px;
-  top: 0;
-  left: 0;
-}
-
-body {
-  padding-left: 10px;
 }
 
 .content-1 {
   grid-area: content-1;
+  max-height: 70%;
   max-width: 65%;
   margin-top: 53px;
   padding-top: 30px;
@@ -44,7 +39,7 @@ body {
 
 .title {
   grid-area: title;
-  max-height: 10vh;
+  max-height: 100px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 40px;
@@ -78,6 +73,10 @@ table img {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.flex-items {
+  margin: 10px;
 }
 
 /* content pages mobile wrapper */
