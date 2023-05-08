@@ -75,10 +75,6 @@ table img {
     -ms-user-select: none;
 }
 
-.flex-items {
-  margin: 10px;
-}
-
 /* content pages mobile wrapper */
 
 @media (max-width: 1100px) {
