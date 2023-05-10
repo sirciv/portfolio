@@ -9,10 +9,9 @@ display: grid;
 width: 100vw;
 height: 100vh;
 grid-template-columns: 300px auto;
-grid-template-rows: 4vh auto auto auto;
+grid-template-rows: auto auto auto;
 grid-gap: 0.5vw;
 grid-template-areas:
-    "gear header"
     "sidebar content-1"
     "sidebar title"
     "sidebar content-2"
@@ -24,9 +23,14 @@ grid-template-areas:
 
 .sidebar {
   grid-area: sidebar;
-  position: fixed;
   display: inline-block;
   width: 280px;
+  position: fixed;
+}
+
+#sidebar_content {
+  max-height: 58vh;
+  overflow-y: scroll;
 }
 
 .content-1 {
