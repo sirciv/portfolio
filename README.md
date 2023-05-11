@@ -20,3 +20,4 @@ TO BE IMPLEMENTED (short-term)
 TO BE IMPLEMENTED (long-term)
 - some type of content filtering system on the homepage
 - content randomization for the splashpage using a data.json model
+- write my own dark mode (lights-off.js)
