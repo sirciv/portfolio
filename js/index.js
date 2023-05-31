@@ -20,7 +20,7 @@ var gearlogo = document.getElementById("gearlogo");
 })();
     
 window.addEventListener("optimizedScroll", function() { 
-    let speedAdjust = window.pageYOffset / 12;
+    let speedAdjust = window.pageYOffset / 16;
     gearlogo.style.transform = "rotate("+speedAdjust+"deg)";
 });
 
@@ -35,13 +35,3 @@ function scrollToTop(scrollDuration) {
           else clearInterval(scrollInterval); 
       },15);
   }
-
-//2. INIT GALLERY
-
-// import PhotoSwipeLightbox from 'photoswipe-lightbox.esm.js';
-// const lightbox = new PhotoSwipeLightbox({
-//     gallery: '#my-gallery',
-//     children: 'a',
-//     pswpModule: () => import('photoswipe.esm.js')
-// });
-// lightbox.init();

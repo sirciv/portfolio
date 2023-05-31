@@ -2,7 +2,27 @@
    /* spencer's somewhat mediocore but still kickass stylesheet */
    /* welcome! */
 
-   /* I. GLOBAL */
+  /* style.css
+  1. global
+  2. other styles
+  3. top corner/asterisk
+  4. sidebar
+
+  index.css
+  A1. CSS grid
+  A2. tooltip
+  A3. mobile wrapper
+
+  content.css
+  B1. content formatting
+  B2. mobile wrapper
+  B3. photoswipe
+
+  about.css
+  C1. formatting
+  C2. mobile wrapper */
+   
+  /* 1. GLOBAL */
   
   html, body {
     margin: 0;
@@ -12,7 +32,7 @@
     background-color: #eff5f5;
   }
   
-  /* II. OTHER STYLES */
+  /* 2. OTHER STYLES */
   
   body {
     background-color: #eff5f5;
@@ -86,18 +106,6 @@
     margin-top: 25px;
   }
 
-  #myHeader {
-    height: auto;
-    width: 50vw;
-    position: absolute;
-    bottom: 0px;
-    user-select: none;
-      -moz-user-select: none;
-      -webkit-user-drag: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-  }
-
   .body{
     height:2000px;
     margin:5px auto;
@@ -110,7 +118,7 @@
     color: #1b1b1b;
     position:fixed;
     bottom:20px;
-    right:0.5vw;
+    right:1.5vw;
     font-size: 14px;
   }
 
@@ -125,29 +133,29 @@
     text-decoration: none;
   }
   a:hover {
-    color: #F6873D;
+    color: orange;
     background-color: transparent;
     text-decoration: underline;
   }
 
   ::selection {
-    background: #F6873D; /* WebKit/Blink Browsers */
+    background: orange; /* WebKit/Blink Browsers */
   }
   ::-moz-selection {
-    background: #F6873D; /* Gecko Browsers */
+    background: orange; /* Gecko Browsers */
   }
 
-  /* III. TOP CORNER (ASTERISK) */
+  /* 3. TOP CORNER (ASTERISK) */
 
   .top_corner {
     z-index: 4;
     grid-area: gear;
     position: fixed;
     width: 280px;
+    pointer-events: all;
   }
 
-  #top_corner_image
-  {
+  #top_corner_image {
     position: relative;
     top: 0;
     left: 0;
@@ -155,16 +163,50 @@
     max-height: 100%;
   }
 
-  .gearlogo_image
-  {
+  #gearlogo {
     position: absolute;
     height: 225px;
     width: auto;
     top: 44px;
     left: 44px;
+    user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
   }
 
-  /* IV. SIDEBAR */
+  #backarrow {
+    position: absolute;
+    height: 210px;
+    width: auto;
+    top: 50px;
+    left: 30px;
+    display: none;
+  }
+
+  .top_corner:hover #backarrow {
+    display: inline-block;
+  }
+  
+  .top_corner:hover #gearlogo {
+    display: none;
+  }
+
+  #altlogo {
+    position: absolute;
+    height: 225px;
+    width: auto;
+    top: 44px;
+    left: 44px;
+    display: none;
+  }
+
+  .top_corner:hover #altlogo {
+    display: inline-block;
+  }
+
+  /* 4. SIDEBAR */
 
   .sidebar {
     background-color: #dfecec;
