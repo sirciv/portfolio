@@ -176,6 +176,19 @@
       -ms-user-select: none;
   }
 
+  #gearlogo_noflash {
+    position: absolute;
+    height: 225px;
+    width: auto;
+    top: 44px;
+    left: 44px;
+    user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+  }
+
   #backarrow {
     position: absolute;
     height: 210px;

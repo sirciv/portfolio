@@ -1,6 +1,6 @@
 // 1. SCROLLING LOGO
 
-var gearlogo = document.getElementById("gearlogo");
+var gearlogo = document.getElementById("gearlogo_noflash");
 
 ;(function() {
     var throttle = function(type, name, obj) {
