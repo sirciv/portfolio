@@ -7,7 +7,7 @@
   height: auto;
   margin: 0;
   grid-template-columns: 280px calc(99vw - 280px);
-  grid-template-rows: 155vh;
+  grid-template-rows: 185vh;
   grid-gap: 0vw;
   grid-template-areas:
       "sidebar content-1"
@@ -25,6 +25,19 @@
   grid-area: content-1;
   max-width: 100%
 } 
+
+#gearlogo_noflash {
+  position: absolute;
+  height: 225px;
+  width: auto;
+  top: 44px;
+  left: 44px;
+  user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 
 /* A2. TOOLTIP */
 
@@ -71,22 +84,18 @@
         "sidebar"
   }
 
+  #gearlogo_noflash {
+    left: 70vw;
+    height: 100px;
+    width: auto;
+  }
+
   .content-1 {
     display: none;
   }
 
   #top_corner_image {
-    visibility: hidden;
-  }
-
-  .sidebar {
-    width: 100% !important;
-    left: 20px;
-    background-color: #eff5f5;
-  }
-
-  #sidebar_content {
-    left: 50px;
+    display: none;
   }
 
  }

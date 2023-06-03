@@ -26,14 +26,6 @@ grid-template-areas:
 
 .sidebar {
   grid-area: sidebar;
-  display: inline-block;
-  width: 280px;
-  position: fixed;
-}
-
-#sidebar_content {
-  max-height: 58vh;
-  overflow-y: scroll;
 }
 
 .content-1 {
@@ -51,7 +43,7 @@ grid-template-areas:
   padding-right: 50px;
   padding-top: 40px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .content-2 {

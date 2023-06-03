@@ -31,6 +31,11 @@
     overflow-x: initial !important;
     background-color: #eff5f5;
   }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
   
   /* 2. OTHER STYLES */
   
@@ -49,7 +54,7 @@
   
   h2 {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 32px;
+    font-size: 26px;
     margin-top: 0px;
     margin-bottom: 0px;
     color: #F6873D;
@@ -176,19 +181,6 @@
       -ms-user-select: none;
   }
 
-  #gearlogo_noflash {
-    position: absolute;
-    height: 225px;
-    width: auto;
-    top: 44px;
-    left: 44px;
-    user-select: none;
-      -moz-user-select: none;
-      -webkit-user-drag: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-  }
-
   #backarrow {
     position: absolute;
     height: 210px;
@@ -227,6 +219,8 @@
     height: 100%;
     top: 0;
     left: 0;
+    width: 280px;
+    position: fixed;
   }
 
   .sidebar_margin {
@@ -247,6 +241,8 @@
     font-size: 12pt;
     text-align: left;
     width: 80%;
+    max-height: 58vh;
+    overflow-y: scroll;
   }
 
   #sidebar_content img {
