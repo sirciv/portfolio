@@ -39,6 +39,10 @@
                 </div>
                 <div class="sidebar_margin"></div>
                 <div id="sidebar_content"></div>
+                <!-- SIDEBAR CONTENT WRAPPER -->
+                <script> 
+                $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {});
+                </script>
             </div>
             <div class="content-1" style="max-height: 60%;">
                 <div class="pswp-gallery" id="gallery" style="width: 40%;">
@@ -110,10 +114,6 @@
                     </div>
                 </div>
             </div>
-            <!-- SIDEBAR CONTENT WRAPPER -->
-            <script> 
-            $( "#sidebar_content" ).load( "../sidebar/sidebar.html", function( response, status, xhr ) {});
-            </script>
         </div>
     </body>
     <footer>

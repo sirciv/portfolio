@@ -30,8 +30,7 @@ grid-template-areas:
 
 .content-1 {
   grid-area: content-1;
-  max-height: 70%;
-  max-width: 65%;
+  max-width: 66%;
   margin-top: 53px;
   padding-top: 30px;
 }
@@ -55,7 +54,7 @@ grid-template-areas:
 }
 
 .content-2 img {
-  max-width: 70%;
+  max-width: 80%;
 }
 
 table img {
@@ -113,22 +112,34 @@ table img {
   }
 
   p {
-    margin: 0;
+    margin-right: 0;
   }
 
-  footer {
-    visibility: hidden;
+  .top_corner:hover #backarrow {
+    display: none;
   }
+  
+  .top_corner:hover #gearlogo {
+    display: inline-block;
+  }
+
+  .pswp-gallery {
+    width: 100%;
+  }
+  /* Will not work until CSS is reordered. */
+
+  /* footer {
+    visibility: hidden;
+  } */
 }
 
 /* B3. photoswipe */
 
-#custom-gallery-wrap {
-  display: flex; 
+.custom-gallery-wrap {
+  display: flex;
+  flex-flow: wrap;
 }
 
-#custom-gallery-wrap > pwsp-gallery__item > img {
-  flex: 0 0 20%;
-  height: auto;
-  visibility: hidden;
+.custom-gallery-wrap > .pswp-gallery__item {
+  width: 30vw !important;
 }
