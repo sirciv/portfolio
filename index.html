@@ -10,6 +10,8 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
         <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Spencer Allan's personal website">
@@ -25,11 +27,11 @@
         <meta name="twitter:description" content="Spencer Allan is a Chicago based designer and writer." />
         <meta name="twitter:image:alt"
             content="Spencer Allan's website homepage with many project images stacked all over the screen." />
+        <script type="text/javascript" src="js/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
-            <div class="header"></div>
             <div class="sidebar">    
                 <div class="top_corner">
                     <img src="../icons/top_corner.svg" id="top_corner_image">
@@ -73,7 +75,7 @@
                     <img alt="" src="images/stanford/stanford-cover-18.jpeg"></a>
                     <span class="tooltip">"Untitled Stanford" <em>graphic design</em></span>
                 </div>                    
-                <div style="top: 725px; left: 47%; max-width: 225px;" class="entry">
+                <div style="top: 750px; left: 47%; max-width: 225px;" class="entry">
                     <a href="content/tartan-67.html">
                     <img alt="" src="images/tartan/tartan-cover-44.jpg"></a>
                     <span class="tooltip">"Tartan Issue 67" <em>graphic design</em></span>
@@ -103,6 +105,17 @@
                     <img alt="" src="images/hayward/HaywardLibrary.jpg"></a>
                     <span class="tooltip">"Noll & Tam on Libraries" <em>Field Study ↗</em></span>
                 </div>
+                <div style="top: 1050px; left: 75%; max-width: 175px;" class="entry" class="play-btn" onclick="gameInit()">
+                    <img alt="" src="https://media.cnn.com/api/v1/images/stellar/prod/220320181933-01-rare-snake-alabama-handout.jpg"></a>
+                    <span class="tooltip">"Snake" <em>???</em></span>
+                </div>
+                <script>
+                    function gameInit() {
+                        scrollToTop(150);
+                        $(document.body).append("<div id='app' class='app'><canvas></canvas><div class='score'>0</div></div>");
+                        snakeGame.init();
+                    }
+                </script>
             </div>
         </div>
         <script type="text/javascript" src="js/index.js"></script>

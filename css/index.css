@@ -7,7 +7,7 @@
   height: auto;
   margin: 0;
   grid-template-columns: 280px calc(99vw - 280px);
-  grid-template-rows: 185vh;
+  grid-template-rows: 1350px;
   grid-gap: 0vw;
   grid-template-areas:
       "sidebar content-1"
@@ -99,3 +99,29 @@
   }
 
  }
+
+ /* A4. SNAKE */
+
+ .app {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.app .score {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  color: green;
+  font: normal 65px 'Press Start 2P', cursive;
+  overflow: hidden;
+  user-select: none;
+}
+
+.app #gearlogo_noflash {
+  background-color: white;
+}
