@@ -30,7 +30,7 @@ grid-template-areas:
 
 .content-1 {
   grid-area: content-1;
-  max-width: 66%;
+  max-width: 80%;
   margin-top: 53px;
   padding-top: 30px;
 }
@@ -86,10 +86,6 @@ table img {
     scale: 45%;
     top: -8px !important;
     left: -15px !important;
-  }
-
-  .sidebar_margin {
-    visibility: visible;
   }
 
   /* content wrapping */

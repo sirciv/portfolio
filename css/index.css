@@ -85,8 +85,8 @@
   }
 
   #gearlogo_noflash {
-    left: 70vw;
-    height: 100px;
+    left: 65vw;
+    height: 160px;
     width: auto;
   }
 
@@ -96,6 +96,15 @@
 
   #top_corner_image {
     display: none;
+  }
+
+  .sidebar {
+    position: relative;
+    background-color: #eff5f5;
+  }
+
+  #sidebar_content {
+    overflow-y: visible;
   }
 
  }
