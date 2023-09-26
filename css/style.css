@@ -7,21 +7,22 @@
   2. other styles
   3. top corner/asterisk
   4. sidebar
+  5. mobile
 
   index.css
   A1. CSS grid
   A2. tooltip
-  A3. mobile wrapper
+  A3. mobile
   A4. snake
 
   content.css
   B1. content formatting
-  B2. mobile wrapper
+  B2. mobile
   B3. photoswipe
 
   about.css
   C1. formatting
-  C2. mobile wrapper */
+  C2. mobile */
    
   /* 1. GLOBAL */
   
@@ -249,6 +250,24 @@
   #sidebar_content img {
     max-width: 25px;
     max-height: auto;
+  }
+
+/* 5. MOBILE */
+
+  @media (max-width: 1200px) {
+
+    .footer {
+      display: none;
+    }
+
+    html, body {
+      overflow-x: hidden;
+    }
+
+    body {
+      position: relative;
+    }
+
   }
 
   /* Super important code for the index to work */

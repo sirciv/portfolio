@@ -88,6 +88,14 @@ table img {
     left: -15px !important;
   }
 
+  img {
+    width: auto;
+  }
+
+  html {
+    margin: 0;
+  }
+
   /* content wrapping */
 
   body {
