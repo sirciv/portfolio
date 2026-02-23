@@ -3,7 +3,51 @@ layout: base.njk
 title: Spencer Allan — Edificio Castelar Redesign
 pageType: content
 keywords: ARUP, Northwestern, architecture, Edificio Castelar, spencer allan
+galleryHeight: 160
+gallery:
+  - src: /assets/images/castelar/castelar-1.jpg
+    alt: Portrait view of the Castelar building facade
+    width: 574
+    height: 850
+    scale: 38
+    x: 2
+    y: 0
+    z: 3
+  - src: /assets/images/castelar/castelar-3.png
+    alt: Castelar facade detail
+    width: 1122
+    height: 760
+    scale: 55
+    x: 38
+    y: 5
+    z: 2
+  - src: /assets/images/castelar/ARUP-1.png
+    alt: Rhino geometry and shadow study
+    width: 1500
+    height: 1125
+    scale: 50
+    x: 2
+    y: 65
+    z: 4
+    caption: 'The original geometry and shadow study was conducted using Rhino'
+  - src: /assets/images/castelar/ARUP-3.jpg
+    alt: ARUP facade analysis
+    width: 1500
+    height: 1125
+    scale: 48
+    x: 48
+    y: 52
+    z: 1
+  - src: /assets/images/castelar/castelar-4.png
+    alt: Final facade proposal
+    width: 2593
+    height: 1728
+    scale: 60
+    x: 5
+    y: 108
+    z: 5
 ---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
 <div class="project-header">
   <h2>A Sustainable Facade for the Castelar Building</h2>
   <span class="project-year">2019</span>
@@ -16,47 +60,5 @@ keywords: ARUP, Northwestern, architecture, Edificio Castelar, spencer allan
 </div>
 
 <div class="project-gallery">
-  <div class="pswp-gallery collage-gallery">
-    <div class="pswp-gallery__item">
-      <a href="/images/castelar/castelar-1.jpg"
-         data-pswp-width="574"
-         data-pswp-height="850"
-         target="_blank">
-        <img src="/images/castelar/castelar-1.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/castelar/castelar-3.png"
-         data-pswp-width="1122"
-         data-pswp-height="760"
-         target="_blank">
-        <img src="/images/castelar/castelar-3.png" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/castelar/ARUP-1.png"
-         data-pswp-width="1500"
-         data-pswp-height="1125"
-         target="_blank">
-        <img src="/images/castelar/ARUP-1.png" loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content">The original geometry and shadow study was conducted using Rhino</div>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/castelar/ARUP-3.jpg"
-         data-pswp-width="1500"
-         data-pswp-height="1125"
-         target="_blank">
-        <img src="/images/castelar/ARUP-3.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/castelar/castelar-4.png"
-         data-pswp-width="2593"
-         data-pswp-height="1728"
-         target="_blank">
-        <img src="/images/castelar/castelar-4.png" loading="lazy"/>
-      </a>
-    </div>
-  </div>
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
 </div>

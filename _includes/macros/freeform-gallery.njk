@@ -1,0 +1,31 @@
+{% macro freeformGallery(images, opts) %}
+{% set options = opts or {} %}
+<div class="freeform-gallery{% if options.photoswipe %} pswp-gallery{% endif %}"
+     {% if options.height %}style="padding-bottom: {{ options.height }}%"{% endif %}
+     aria-label="Image gallery">
+  {% for img in images %}
+  <div class="freeform-item{% if options.photoswipe %} pswp-gallery__item{% endif %}"
+    {% if img.onclick %}onclick="{{ img.onclick }}"{% endif %}
+    style="--scale: {{ img.scale }}; --x: {{ img.x }}; --y: {{ img.y }}; --z: {{ img.z }}; --aspect: {{ (img.width / img.height) | round(4) }};">
+    {% if img.href %}
+    <a href="{{ img.href }}"{% if img.external %} target="_blank" rel="noopener"{% endif %}>
+    {% elif options.photoswipe %}
+    <a href="{{ img.src }}" data-pswp-width="{{ img.width }}" data-pswp-height="{{ img.height }}" target="_blank">
+    {% endif %}
+    <img
+      src="{{ img.src }}"
+      alt="{{ img.alt or '' }}"
+      width="{{ img.width }}"
+      height="{{ img.height }}"
+      {% if loop.first %}loading="eager"{% else %}loading="lazy"{% endif %}
+      decoding="async"
+    />
+    {% if img.href or options.photoswipe %}
+    </a>
+    {% endif %}
+    {% if img.tooltip %}<span class="tooltip">{{ img.tooltip | safe }}</span>{% endif %}
+    {% if img.caption %}<div class="pswp-caption-content">{{ img.caption | safe }}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}

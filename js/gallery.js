@@ -1,12 +1,12 @@
 // ── 1. PHOTOSWIPE ──────────────────────────────────────────────────────────────
 
-import PhotoSwipeLightbox from '../photoswipe/dist/photoswipe-lightbox.esm.js';
-import PhotoSwipeDynamicCaption from '../photoswipe/dist/photoswipe-dynamic-caption-plugin.esm.js';
+import PhotoSwipeLightbox from '../js/photoswipe/dist/photoswipe-lightbox.esm.js';
+import PhotoSwipeDynamicCaption from '../js/photoswipe/dist/photoswipe-dynamic-caption-plugin.esm.js';
 
 const lightbox = new PhotoSwipeLightbox({
   gallerySelector: '.pswp-gallery',
   childSelector: '.pswp-gallery__item',
-  pswpModule: () => import('../photoswipe/dist/photoswipe.esm.js'),
+  pswpModule: () => import('../js/photoswipe/dist/photoswipe.esm.js'),
   paddingFn: () => ({ top: 30, bottom: 30, left: 70, right: 70 }),
 });
 
@@ -31,7 +31,7 @@ var gearlogo = document.getElementById('gearlogo');
 })();
 
 
-// ── 3. MANUAL ATTRIBUTE APPLICATION ────────────────────────────────────────────
+// ── 3. FREFFORM: MANUAL ATTRIBUTE APPLICATION ────────────────────────────────────────────
 //
 // Items with data-w, data-rotate, or data-mt are styled directly.
 // data-w:      explicit width (% or px); height becomes auto (natural aspect ratio)
@@ -56,14 +56,7 @@ function applyManualAttrs(items) {
 }
 
 
-// ── 4. JUSTIFIED ROW LAYOUT ────────────────────────────────────────────────────
-//
-// Creates a Cargo-style collage: images in each row share the same height and
-// together fill the full container width. Aspect ratios come from the
-// data-pswp-width / data-pswp-height attributes already on every <a> tag.
-//
-// Items with data-w are excluded from the auto layout — they keep their
-// manually-specified width and natural height.
+// ── 4. FREFFORM: JUSTIFIED ROW LAYOUT ────────────────────────────────────────────────────
 
 function justifiedLayout(container, targetRowHeight, gap) {
   const allItems  = Array.from(container.querySelectorAll(':scope > .pswp-gallery__item'));
@@ -113,7 +106,7 @@ function justifiedLayout(container, targetRowHeight, gap) {
 }
 
 
-// ── 5. INIT ────────────────────────────────────────────────────────────────────
+// ── 5. FREFFORM: INIT ────────────────────────────────────────────────────────────────────
 
 function initCollageGalleries() {
   const galleries = document.querySelectorAll('.collage-gallery');

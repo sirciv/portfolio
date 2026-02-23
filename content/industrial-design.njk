@@ -3,7 +3,55 @@ layout: base.njk
 title: Spencer Allan — Industrial Design Concepts
 pageType: content
 keywords: Holderfield, Segal Design, Northwestern, industrial design, spencer allan
+galleryHeight: 130
+gallery:
+  - src: /assets/images/industrial-design-winter/portfolio-transparent-31.png
+    alt: Collage of industrial design project ideas
+    width: 2178
+    height: 1113
+    scale: 80
+    x: 2
+    y: 0
+    z: 3
+    caption: 'A partial collage of project ideas generated over the season'
+  - src: /assets/images/industrial-design-winter/portfolioMockups-36.jpg
+    alt: Campus bus stop design
+    width: 2621
+    height: 1651
+    scale: 50
+    x: 2
+    y: 48
+    z: 2
+    caption: 'Organic design for a campus bus stop'
+  - src: /assets/images/industrial-design-winter/portfolioMockups-35.jpg
+    alt: Quiz Bowl bag design
+    width: 2621
+    height: 1728
+    scale: 50
+    x: 46
+    y: 48
+    z: 4
+    caption: 'Design for a bag that meant to hold a standard NAQT Quiz Bowl computer'
+  - src: /assets/images/industrial-design-winter/portfolioMockups-33.jpg
+    alt: Bluetooth speaker design
+    width: 2621
+    height: 1651
+    scale: 50
+    x: 2
+    y: 88
+    z: 1
+    caption: 'Amp-inspired design for a portable Bluetooth speaker'
+  - src: /assets/images/industrial-design-winter/portfolioMockups-34.jpg
+    alt: Hybrid sneaker/snowshoe design
+    width: 2621
+    height: 1651
+    scale: 50
+    x: 46
+    y: 88
+    z: 5
+    caption: 'Design for a hybrid sneaker/snowshoe'
 ---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
 <div class="project-header">
   <h2>Industrial Design Concepts</h2>
   <span class="project-year">2026</span>
@@ -14,51 +62,5 @@ keywords: Holderfield, Segal Design, Northwestern, industrial design, spencer al
 </div>
 
 <div class="project-gallery">
-  <div class="pswp-gallery collage-gallery">
-    <div class="pswp-gallery__item">
-      <a href="/images/industrial-design-winter/portfolio-transparent-31.png"
-         data-pswp-width="2178"
-         data-pswp-height="1113"
-         target="_blank">
-        <img src="/images/industrial-design-winter/portfolio-transparent-31.png" alt="Collage of industrial design project ideas" loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content">A partial collage of project ideas generated over the season</div>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/industrial-design-winter/portfolioMockups-36.jpg"
-         data-pswp-width="2621"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/industrial-design-winter/portfolioMockups-36.jpg" loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content">Organic design for a campus bus stop</div>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/industrial-design-winter/portfolioMockups-35.jpg"
-         data-pswp-width="2621"
-         data-pswp-height="1728"
-         target="_blank">
-        <img src="/images/industrial-design-winter/portfolioMockups-35.jpg" loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content">Design for a bag that meant to hold a standard NAQT Quiz Bowl computer</div>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/industrial-design-winter/portfolioMockups-33.jpg"
-         data-pswp-width="2621"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/industrial-design-winter/portfolioMockups-33.jpg" loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content">Amp-inspired design for a portable Bluetooth speaker</div>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/industrial-design-winter/portfolioMockups-34.jpg"
-         data-pswp-width="2621"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/industrial-design-winter/portfolioMockups-34.jpg" loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content">Design for a hybrid sneaker/snowshoe</div>
-    </div>
-  </div>
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
 </div>

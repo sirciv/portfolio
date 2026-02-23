@@ -3,7 +3,59 @@ layout: base.njk
 title: Spencer Allan — Tartan Issue 67
 pageType: content
 keywords: tartan, Highland Park High School, literary magazine, publication, graphic design, Columbia Scholastic Press Association, spencer allan
+galleryHeight: 120
+gallery:
+  - src: /assets/images/tartan/tartan-covers.png
+    alt: Covers of the Tartan Deconstructed
+    width: 3909
+    height: 1651
+    scale: 75
+    x: 2
+    y: 0
+    z: 2
+    caption: 'The cover of the Tartan is "deconstructed" as you flip through the magazine. This was inspired by the proof marks used by printers in the publication process.'
+  - src: /assets/images/tartan/tartan_poster.jpg
+    alt: Tartan Issue 67 poster
+    width: 757
+    height: 982
+    scale: 30
+    x: 66
+    y: 35
+    z: 3
+  - src: /assets/images/tartan/new-tartan-17.png
+    alt: Tartan Issue 67 spread 1
+    width: 2551
+    height: 1651
+    scale: 48
+    x: 2
+    y: 38
+    z: 1
+  - src: /assets/images/tartan/new-tartan-18.jpg
+    alt: Tartan Issue 67 spread 2
+    width: 2551
+    height: 1651
+    scale: 48
+    x: 48
+    y: 38
+    z: 4
+  - src: /assets/images/tartan/new-tartan-19.jpg
+    alt: Tartan Issue 67 spread 3
+    width: 2551
+    height: 1651
+    scale: 48
+    x: 2
+    y: 76
+    z: 5
+  - src: /assets/images/tartan/new-tartan-26.jpg
+    alt: Tartan Issue 67 spread 4
+    width: 2551
+    height: 1651
+    scale: 48
+    x: 48
+    y: 76
+    z: 6
 ---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
 <div class="project-header">
   <h2>Tartan Literary &amp; Arts Magazine Issue 67</h2>
   <span class="project-year">2020</span>
@@ -16,55 +68,5 @@ keywords: tartan, Highland Park High School, literary magazine, publication, gra
 </div>
 
 <div class="project-gallery">
-  <div class="pswp-gallery collage-gallery">
-    <div class="pswp-gallery__item">
-      <a href="/images/tartan/tartan-covers.png"
-         data-pswp-width="3909"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/tartan/tartan-covers.png" alt="Covers of the Tartan Deconstructed" loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content">The cover of the Tartan is "deconstructed" as you flip through the magazine. This was inspired by the proof marks used by printers in the publication process.</div>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/tartan/tartan_poster.jpg"
-         data-pswp-width="757"
-         data-pswp-height="982"
-         target="_blank">
-        <img src="/images/tartan/tartan_poster.jpg" loading="lazy">
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/tartan/new-tartan-17.png"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/tartan/new-tartan-17.png" loading="lazy">
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/tartan/new-tartan-18.jpg"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/tartan/new-tartan-18.jpg" loading="lazy">
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/tartan/new-tartan-19.jpg"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/tartan/new-tartan-19.jpg" loading="lazy">
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/tartan/new-tartan-26.jpg"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/tartan/new-tartan-26.jpg" loading="lazy">
-      </a>
-    </div>
-  </div>
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
 </div>

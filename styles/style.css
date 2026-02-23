@@ -1,6 +1,5 @@
 /* ============================================================
-   style.css — Spencer Allan Portfolio
-   Global styles shared across all pages
+   spencer allan's very cool stylesheet!
    ============================================================ */
 
 /* 1. GLOBAL
@@ -9,9 +8,8 @@
    4. TOP CORNER / ASTERISK LOGO
    5. SIDEBAR
    6. SIDEBAR NAVIGATION (circles + categories)
-   7. CONTENT AREAS
-   8. FOOTER
-   9. MOBILE
+   7. FOOTER
+   8. MOBILE
    ============================================================ */
 
 
@@ -128,6 +126,7 @@ a:hover {
 }
 
 /* Homepage (no back arrow) — parent <a> handles placement */
+/* I hate the way this is implemented, need to find better solution. */
 #gearlogo_noflash {
   display: block;
   height: 100px;
@@ -284,32 +283,7 @@ a:hover {
   height: 10px;
 }
 
-
-/* ── 7. CONTENT AREAS ───────────────────────────────────────── */
-
-.content-1 {
-  color: black;
-  padding-top: 40px;
-  padding-bottom: 5px;
-}
-
-.content-1 img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.content-2 img {
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-/* Super important — absolute positioning for index entries */
-.entry {
-  position: absolute;
-}
-
-
-/* ── 8. FOOTER ──────────────────────────────────────────────── */
+/* ── 7. FOOTER ──────────────────────────────────────────────── */
 
 #bottom-message {
   color: #1b1b1b;
@@ -321,7 +295,7 @@ a:hover {
 }
 
 
-/* ── 9. MOBILE ──────────────────────────────────────────────── */
+/* ── 8. MOBILE ──────────────────────────────────────────────── */
 
 /* Hidden on desktop — only appear on mobile */
 .mobile-topbar    { display: none; }

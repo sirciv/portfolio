@@ -3,7 +3,66 @@ layout: base.njk
 title: Spencer Allan — Reliance
 pageType: content
 keywords: reliance building, chicago, architecture, spencer allan
+galleryHeight: 183
+gallery:
+  - src: /assets/images/reliance/facade-A-comp.jpg
+    alt: Reliance Building facade study A
+    width: 1382
+    height: 2074
+    scale: 30
+    x: 2
+    y: 0
+    z: 1
+  - src: /assets/images/reliance/facade-B-comp.jpg
+    alt: Reliance Building facade study B
+    width: 1360
+    height: 2041
+    scale: 30
+    x: 35
+    y: 5
+    z: 2
+  - src: /assets/images/reliance/facade-C-comp.jpg
+    alt: Reliance Building facade study C
+    width: 1360
+    height: 2041
+    scale: 30
+    x: 68
+    y: 2
+    z: 3
+  - src: /assets/images/reliance/facade-D-comp.jpg
+    alt: Reliance Building facade study D
+    width: 1360
+    height: 2041
+    scale: 32
+    x: 2
+    y: 50
+    z: 4
+  - src: /assets/images/reliance/facade-E-comp.jpg
+    alt: Reliance Building facade study E
+    width: 1360
+    height: 2041
+    scale: 32
+    x: 34
+    y: 55
+    z: 5
+  - src: /assets/images/reliance/facade-F-comp.jpg
+    alt: Reliance Building facade study F
+    width: 1360
+    height: 2041
+    scale: 32
+    x: 66
+    y: 52
+    z: 6
+  - src: /assets/images/reliance/facade-G-comp.jpg
+    alt: Reliance Building facade study G
+    width: 1360
+    height: 2041
+    scale: 40
+    x: 28
+    y: 108
+    z: 7
 ---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
 <div class="project-header">
   <h2>"Reliance"</h2>
   <span class="project-year">2026</span>
@@ -13,62 +72,5 @@ keywords: reliance building, chicago, architecture, spencer allan
 </div>
 
 <div class="project-gallery">
-  <div class="pswp-gallery collage-gallery">
-    <div class="pswp-gallery__item">
-      <a href="/images/reliance/facade-A-comp.jpg"
-         data-pswp-width="1382"
-         data-pswp-height="2074"
-         target="_blank">
-        <img src="/images/reliance/facade-A-comp.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/reliance/facade-B-comp.jpg"
-         data-pswp-width="1360"
-         data-pswp-height="2041"
-         target="_blank">
-        <img src="/images/reliance/facade-B-comp.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/reliance/facade-C-comp.jpg"
-         data-pswp-width="1360"
-         data-pswp-height="2041"
-         target="_blank">
-        <img src="/images/reliance/facade-C-comp.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/reliance/facade-D-comp.jpg"
-         data-pswp-width="1360"
-         data-pswp-height="2041"
-         target="_blank">
-        <img src="/images/reliance/facade-D-comp.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/reliance/facade-E-comp.jpg"
-         data-pswp-width="1360"
-         data-pswp-height="2041"
-         target="_blank">
-        <img src="/images/reliance/facade-E-comp.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/reliance/facade-F-comp.jpg"
-         data-pswp-width="1360"
-         data-pswp-height="2041"
-         target="_blank">
-        <img src="/images/reliance/facade-F-comp.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/reliance/facade-G-comp.jpg"
-         data-pswp-width="1360"
-         data-pswp-height="2041"
-         target="_blank">
-        <img src="/images/reliance/facade-G-comp.jpg" loading="lazy"/>
-      </a>
-    </div>
-  </div>
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
 </div>

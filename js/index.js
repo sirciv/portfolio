@@ -29,7 +29,7 @@ function scrollToTop(scrollDuration) {
 }
 
 
-// ── 3. MANUAL ATTRIBUTE APPLICATION ────────────────────────────────────────────
+// ── 3. FREEFORM: MANUAL ATTRIBUTE APPLICATION ────────────────────────────────────────────
 //
 // Mirrors the applyManualAttrs logic in gallery.js for homepage entries.
 // data-w:      explicit width (% or px); height becomes auto
@@ -52,7 +52,7 @@ function applyManualAttrs(entries) {
 }
 
 
-// ── 4. HOMEPAGE JUSTIFIED GALLERY ──────────────────────────────────────────────
+// ── 4. FREEFORM: HOMEPAGE JUSTIFIED GALLERY ──────────────────────────────────────────────
 //
 // Same row-fill algorithm as gallery.js but reads aspect ratios from natural
 // image dimensions (homepage images have no data-pswp-* attributes).

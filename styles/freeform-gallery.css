@@ -1,0 +1,131 @@
+/* ============================================================
+   freeform-gallery.css, custom gallery engine for photos
+   spencer allan
+
+   Positions absolutely-placed items via CSS custom properties
+   set as inline styles on each .freeform-item element.
+
+   Custom properties (set per-item via inline style):
+     --scale  width as % of container width
+     --x      left offset in container-query width units (cqw)
+     --y      top offset in container-query width units (cqw)
+     --z      stacking order
+     --aspect width/height ratio for intrinsic sizing
+
+     D1. Container
+     D2. Items
+     D3. Tooltip Functionality
+     D4. Mobile (vertical stack)
+   ============================================================ */
+
+
+/* ── D1. Container ───────────────────────────────────────────── */
+
+.freeform-gallery {
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  /* Height is set per-gallery via style="padding-bottom: X%"
+     Default fallback; tune per project using galleryHeight frontmatter. */
+  padding-bottom: 320%;
+}
+
+
+/* ── D2. Each item ───────────────────────────────────────────── */
+
+.freeform-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--scale) * 1%);
+  transform: translate(
+    calc(var(--x) * 1cqw),
+    calc(var(--y) * 1cqw)
+  );
+  z-index: var(--z);
+  /* box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.13); */
+}
+
+.freeform-item a {
+  display: block;
+  width: 100%;
+}
+
+.freeform-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--aspect);
+  transition: filter 0.15s;
+}
+
+.freeform-item:hover img {
+  filter: brightness(1.06);
+}
+
+/* Clickable items */
+.freeform-item[onclick] {
+  cursor: pointer;
+}
+
+
+/* ── D3. Tooltip (homepage entries) ──────────────────────────── */
+
+.freeform-item .tooltip {
+  visibility: hidden;
+  min-width: 175px;
+  background-color: #F6873D;
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 100;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.1s;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.freeform-item .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #F6873D transparent transparent transparent;
+}
+
+.freeform-item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* ── D4. Mobile: stack vertically ────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .freeform-gallery {
+    padding-bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .freeform-item {
+    position: static;
+    width: 100% !important;
+    transform: none !important;
+    /* box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.10); */
+  }
+
+  .freeform-item .tooltip {
+    display: none;
+  }
+}

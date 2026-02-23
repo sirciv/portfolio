@@ -3,7 +3,35 @@ layout: base.njk
 title: Spencer Allan — World Radio
 pageType: content
 keywords: MCA Chicago, Virgil Abloh, world radio, art, spencer allan
+galleryHeight: 100
+gallery:
+  - src: /assets/images/mca-world-radio/radio-cover-37.jpg
+    alt: Array of images showing World Radio, a vintage orange AM radio turned conceptual product.
+    width: 2593
+    height: 1728
+    scale: 65
+    x: 2
+    y: 0
+    z: 2
+    caption: 'World Radio, a vintage AM radio turned sculpture and conceptual product.'
+  - src: /assets/images/mca-world-radio/WorldRadio2.jpg
+    alt: World Radio sculpture detail
+    width: 2375
+    height: 3324
+    scale: 32
+    x: 65
+    y: 5
+    z: 3
+  - src: /assets/images/mca-world-radio/mca-website.png
+    alt: MCA Chicago website featuring World Radio
+    width: 2868
+    height: 1424
+    scale: 60
+    x: 2
+    y: 52
+    z: 1
 ---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
 <div class="project-header">
   <h2>World Radio c/o Virgil Abloh</h2>
   <span class="project-year">2021</span>
@@ -21,27 +49,5 @@ keywords: MCA Chicago, Virgil Abloh, world radio, art, spencer allan
 </div>
 
 <div class="project-gallery">
-  <div class="pswp-gallery collage-gallery">
-    <div class="pswp-gallery__item">
-      <a href="/images/mca-world-radio/radio-cover-37.jpg"
-         data-pswp-width="2593"
-         data-pswp-height="1728"
-         target="_blank">
-        <img src="/images/mca-world-radio/radio-cover-37.jpg" alt="Array of images showing World Radio, a vintage orange AM radio turned conceptual product." loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content">World Radio, a vintage AM radio turned sculpture and conceptual product.</div>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/mca-world-radio/WorldRadio2.jpg"
-         target="_blank">
-        <img src="/images/mca-world-radio/WorldRadio2.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/mca-world-radio/mca-website.png"
-         target="_blank">
-        <img src="/images/mca-world-radio/mca-website.png" loading="lazy"/>
-      </a>
-    </div>
-  </div>
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
 </div>

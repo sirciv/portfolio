@@ -1,10 +1,12 @@
 /* ============================================================
-   index.css — Homepage styles
-   A1. CSS grid layout
+   index.css, homepage styling
+   spencer allan
+
+   A1. Grid layout
    A2. Index gallery (justified rows)
-   A3. Entry tooltips
-   A4. Mobile
-   A5. Snake game
+   A3. Mobile
+   A4. Snake game
+   (tooltip styles moved to freeform-gallery.css)
    ============================================================ */
 
 
@@ -33,19 +35,11 @@
 
 /* ── A2. INDEX GALLERY ──────────────────────────────────────── */
 
-/* Flex container — JS sizes each .entry to fill rows.
-   Starts invisible so the pre-layout column flash never shows;
-   JS fades it in after the first layout pass is applied.
-   overflow:visible so rotated entries can spill outside bounds. */
+/* Padding wrapper for the freeform gallery on the homepage.
+   The freeform-gallery.css handles the actual scattered layout. */
 .index-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
   padding: 40px 50px 80px;
-  align-content: flex-start;
   overflow: visible;
-  opacity: 0;
-  transition: opacity 0.18s ease;
 }
 
 .entry {
@@ -99,46 +93,6 @@
   z-index: 2;
 }
 
-
-/* ── A3. ENTRY TOOLTIPS ─────────────────────────────────────── */
-
-.entry .tooltip {
-  visibility: hidden;
-  min-width: 175px;
-  background-color: #F6873D;
-  color: #fff;
-  text-align: center;
-  padding: 8px 12px;
-  position: absolute;
-  z-index: 10;
-  bottom: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.1s;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-.entry .tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #F6873D transparent transparent transparent;
-}
-
-.entry:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
-
-
 /* ── A4. MOBILE ─────────────────────────────────────────────── */
 
 @media (max-width: 1200px) {
@@ -148,25 +102,8 @@
     grid-template-areas: "content-1";
   }
 
-  /* On mobile the gallery stacks single-column; JS sizing is cleared */
   .index-gallery {
-    flex-direction: column;
-    gap: 8px;
     padding: 16px 16px 60px;
-  }
-
-  .entry {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .entry a {
-    height: auto;
-  }
-
-  .entry img {
-    height: auto;
-    object-fit: unset;
   }
 
 }

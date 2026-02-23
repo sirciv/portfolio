@@ -3,7 +3,51 @@ layout: base.njk
 title: Spencer Allan — Untitled Stanford
 pageType: content
 keywords: stanford, art history, graphic design, publication, spencer allan
+galleryHeight: 146
+gallery:
+  - src: /assets/images/stanford/stanford-spread-15.jpg
+    alt: Stanford art history journal spread
+    width: 2551
+    height: 1651
+    scale: 82
+    x: 2
+    y: 0
+    z: 3
+    caption: '<b>Lorem ipsum dolor (1933)</b><br>Color photograph<br>12 x 10'
+  - src: /assets/images/stanford/stanford-spread-12.jpg
+    alt: Stanford art history journal spread 2
+    width: 2551
+    height: 1651
+    scale: 55
+    x: 2
+    y: 58
+    z: 1
+  - src: /assets/images/stanford/stanford-spread-13.jpg
+    alt: Stanford art history journal spread 3
+    width: 2551
+    height: 1651
+    scale: 55
+    x: 43
+    y: 58
+    z: 2
+  - src: /assets/images/stanford/stanford-spread-14.jpg
+    alt: Stanford art history journal spread 4
+    width: 2551
+    height: 1651
+    scale: 55
+    x: 2
+    y: 100
+    z: 4
+  - src: /assets/images/stanford/stanford-spread-16.jpg
+    alt: Stanford art history journal spread 5
+    width: 2551
+    height: 1651
+    scale: 55
+    x: 43
+    y: 100
+    z: 5
 ---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
 <div class="project-header">
   <h2>Stanford Undergraduate Art History Journal</h2>
   <span class="project-year">2026</span>
@@ -14,47 +58,5 @@ keywords: stanford, art history, graphic design, publication, spencer allan
 </div>
 
 <div class="project-gallery">
-  <div class="pswp-gallery collage-gallery">
-    <div class="pswp-gallery__item">
-      <a href="/images/stanford/stanford-spread-15.jpg"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/stanford/stanford-spread-15.jpg" alt="Stanford art history journal spread" loading="lazy"/>
-      </a>
-      <div class="pswp-caption-content"><b>Lorem ipsum dolor (1933)</b><br>Color photograph<br>12 x 10</div>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/stanford/stanford-spread-12.jpg"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/stanford/stanford-spread-12.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/stanford/stanford-spread-13.jpg"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/stanford/stanford-spread-13.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/stanford/stanford-spread-14.jpg"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/stanford/stanford-spread-14.jpg" loading="lazy"/>
-      </a>
-    </div>
-    <div class="pswp-gallery__item">
-      <a href="/images/stanford/stanford-spread-16.jpg"
-         data-pswp-width="2551"
-         data-pswp-height="1651"
-         target="_blank">
-        <img src="/images/stanford/stanford-spread-16.jpg" loading="lazy"/>
-      </a>
-    </div>
-  </div>
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
 </div>
