@@ -1,20 +1,24 @@
+/* ============================================================
+   index.css — Homepage styles
+   A1. CSS grid layout
+   A2. Index gallery (justified rows)
+   A3. Entry tooltips
+   A4. Mobile
+   A5. Snake game
+   ============================================================ */
 
-/* A1. CSS GRID */
+
+/* ── A1. CSS GRID ───────────────────────────────────────────── */
 
 .container {
   display: grid;
   width: 100%;
   height: auto;
   margin: 0;
-  grid-template-columns: 280px calc(99vw - 280px);
-  grid-template-rows: 1350px;
-  grid-gap: 0vw;
-  grid-template-areas:
-      "sidebar content-1"
-}
-
-.entry video:hover, .entry img:hover {
-  filter: brightness(110%);
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  grid-template-areas: "sidebar content-1";
 }
 
 .sidebar {
@@ -23,39 +27,99 @@
 
 .content-1 {
   grid-area: content-1;
-  max-width: 100%
-} 
-
-#gearlogo_noflash {
-  position: absolute;
-  height: 225px;
-  width: auto;
-  top: 44px;
-  left: 44px;
-  user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  position: relative;
 }
 
-/* A2. TOOLTIP */
+
+/* ── A2. INDEX GALLERY ──────────────────────────────────────── */
+
+/* Flex container — JS sizes each .entry to fill rows.
+   Starts invisible so the pre-layout column flash never shows;
+   JS fades it in after the first layout pass is applied.
+   overflow:visible so rotated entries can spill outside bounds. */
+.index-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 40px 50px 80px;
+  align-content: flex-start;
+  overflow: visible;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.entry {
+  position: relative;
+  /* No overflow:hidden — tooltips at bottom:110% need to escape upward */
+  /* width + height set by justifiedLayout() in index.js */
+}
+
+.entry a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.entry img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.1s;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.entry img:hover,
+.entry video:hover {
+  filter: brightness(1.08);
+}
+
+/* Non-link entries (e.g. snake easter egg) */
+.entry[onclick] {
+  cursor: pointer;
+}
+
+/* Manual-width entries show natural height — no cropping */
+.entry[data-w] img {
+  height: auto;
+  object-fit: unset;
+}
+
+/* Paper / desk effect: subtle shadow for rotated entries */
+.entry[data-rotate] {
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.13);
+  position: relative;
+  z-index: 1;
+}
+
+/* Stacked entries sit on top of neighbours */
+.entry[data-mt] {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ── A3. ENTRY TOOLTIPS ─────────────────────────────────────── */
 
 .entry .tooltip {
   visibility: hidden;
-  width: 190px;
+  min-width: 175px;
   background-color: #F6873D;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 8px 12px;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   bottom: 110%;
   left: 50%;
-  margin-left: -60px;
+  transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.1s;
-  font-family: courier;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .entry .tooltip::after {
@@ -73,51 +137,51 @@
   visibility: visible;
   opacity: 1;
 }
- 
- /* A3. MOBILE WRAPPER */
 
- @media (max-width: 1200px) {
+
+/* ── A4. MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 1200px) {
 
   .container {
     grid-template-columns: 100vw;
-    grid-template-areas:
-        "sidebar"
+    grid-template-areas: "content-1";
   }
 
-  #gearlogo_noflash {
-    left: 65vw;
-    height: 140px;
-    width: auto;
+  /* On mobile the gallery stacks single-column; JS sizing is cleared */
+  .index-gallery {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 16px 60px;
   }
 
-  .content-1 {
-    display: none;
+  .entry {
+    width: 100% !important;
+    height: auto !important;
   }
 
-  #top_corner_image {
-    display: none;
+  .entry a {
+    height: auto;
   }
 
-  .sidebar {
-    position: relative;
-    background-color: #eff5f5;
+  .entry img {
+    height: auto;
+    object-fit: unset;
   }
 
-  #sidebar_content {
-    overflow-y: visible;
-  }
+}
 
- }
 
- /* A4. SNAKE */
+/* ── A5. SNAKE GAME ─────────────────────────────────────────── */
 
- .app {
+.app {
   text-align: center;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 .app .score {

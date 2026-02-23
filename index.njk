@@ -1,0 +1,113 @@
+---
+layout: base.njk
+title: Spencer Allan
+pageType: index
+isHomepage: true
+description: Spencer Allan is a Chicago based designer and writer.
+---
+<div class="content-1">
+  <div class="index-gallery">
+
+    <div class="entry">
+      <a href="/content/emerson/">
+        <img alt="" src="/images/emerson-school/emerson-1.jpg" loading="lazy">
+      </a>
+      <span class="tooltip">"5th Ward School" <em>architecture</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/edificio-castelar/">
+        <img alt="" src="/images/castelar/castelar-2.png" loading="lazy">
+      </a>
+      <span class="tooltip">"Edificio Castelar" <em>architecture</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/reliance/">
+        <img alt="" src="/images/reliance/facade-B-comp.jpg" loading="lazy">
+      </a>
+      <span class="tooltip">"Reliance" <em>art</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/mca-world-radio/">
+        <img alt="" src="/images/mca-world-radio/WorldRadio2.jpg" loading="lazy">
+      </a>
+      <span class="tooltip">"World Radio" <em>art</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/mca-world-radio/">
+        <img alt="" src="/images/mca-world-radio/demo_cover.gif" loading="lazy">
+      </a>
+      <span class="tooltip">"World Radio" <em>art</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/haven/">
+        <img alt="" src="/images/haven/new-cover-haven.png" loading="lazy">
+      </a>
+      <span class="tooltip">"1, 2, 3 House" <em>architecture</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/haven/">
+        <img alt="" src="/images/haven/lasercut.gif" loading="lazy">
+      </a>
+      <span class="tooltip">"1, 2, 3 House" <em>architecture</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/tartan-66/">
+        <img alt="" src="/images/tartan/tartan-1-1.jpg" loading="lazy">
+      </a>
+      <span class="tooltip">"Tartan 66" <em>graphic design</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/tartan-67/">
+        <img alt="" src="/images/tartan/tartan-cover-44.jpg" loading="lazy">
+      </a>
+      <span class="tooltip">"Tartan Issue 67" <em>graphic design</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/industrial-design/">
+        <img alt="" src="/images/industrial-design-winter/portfolioMockups-31.jpg" loading="lazy">
+      </a>
+      <span class="tooltip">"Industrial Design Concepts" <em>industrial design</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="https://gbdmagazine.com/noll-tam/" target="_blank">
+        <img alt="" src="/images/hayward/HaywardLibrary.jpg" loading="lazy">
+      </a>
+      <span class="tooltip">"Noll &amp; Tam on Libraries" <em>Field Study ↗</em></span>
+    </div>
+
+    <div class="entry">
+      <a href="/content/untitled-stanford/">
+        <img alt="" src="/images/stanford/stanford-cover-18.jpeg" loading="lazy">
+      </a>
+      <span class="tooltip">"Untitled Stanford" <em>graphic design</em></span>
+    </div>
+
+    <div class="entry" onclick="gameInit()">
+      <img alt="" src="https://media.cnn.com/api/v1/images/stellar/prod/220320181933-01-rare-snake-alabama-handout.jpg" loading="lazy">
+      <span class="tooltip">"Snake" <em>???</em></span>
+    </div>
+
+  </div>
+
+  <script>
+    function gameInit() {
+      scrollToTop(150);
+      var app = document.createElement('div');
+      app.id = 'app';
+      app.className = 'app';
+      app.innerHTML = '<canvas></canvas><div class="score">0</div>';
+      document.body.appendChild(app);
+      snakeGame.init();
+    }
+  </script>
+</div>
