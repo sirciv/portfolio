@@ -2,15 +2,15 @@
 <button class="mobile-close-btn" onclick="document.body.classList.remove('menu-open')" aria-label="Close menu">✕</button>
 
 <div class="top_corner">
-  <img src="/assets/icons/top_corner.svg" id="top_corner_image" alt="">
+  <img src="/assets/icons/top_corner.svg" id="top_corner_image" alt="" eleventy:ignore>
   {% if isHomepage %}
   <a onclick="scrollToTop(150)" style="cursor:pointer; display:inline-block; position:absolute; top:28px; left:28px;">
-    <img src="/assets/icons/logo.svg" id="gearlogo_noflash" alt="Spencer Allan">
+    <img src="/assets/icons/logo.svg" id="gearlogo_noflash" alt="Spencer Allan" eleventy:ignore>
   </a>
   {% else %}
   <a href="/">
-    <img src="/assets/icons/logo.svg" id="gearlogo" alt="Spencer Allan">
-    <img src="/assets/icons/back_arrow.svg" id="backarrow" alt="Back to home">
+    <img src="/assets/icons/logo.svg" id="gearlogo" alt="Spencer Allan" eleventy:ignore>
+    <img src="/assets/icons/back_arrow.svg" id="backarrow" alt="Back to home" eleventy:ignore>
   </a>
   {% endif %}
 </div>

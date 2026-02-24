@@ -19,6 +19,8 @@
       height="{{ img.height }}"
       {% if loop.first %}loading="eager"{% else %}loading="lazy"{% endif %}
       decoding="async"
+      sizes="(max-width: 1100px) 100vw, {{ img.scale }}vw"
+      {% if img.src | endsWith('.gif') %}eleventy:formats="webp"{% endif %}
     />
     {% if img.href or options.photoswipe %}
     </a>
