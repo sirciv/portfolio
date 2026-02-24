@@ -1,6 +1,7 @@
 // ── 1. SCROLLING LOGO ──────────────────────────────────────────────────────────
 
-var gearlogo = document.getElementById('gearlogo_noflash');
+var gearlogo       = document.getElementById('gearlogo_noflash');
+var mobileGearlogo = document.getElementById('mobile-gearlogo');
 
 ;(function () {
   var running = false;
@@ -8,7 +9,9 @@ var gearlogo = document.getElementById('gearlogo_noflash');
     if (running) return;
     running = true;
     requestAnimationFrame(function () {
-      if (gearlogo) gearlogo.style.transform = 'rotate(' + (window.pageYOffset / 16) + 'deg)';
+      var deg = 'rotate(' + (window.pageYOffset / 16) + 'deg)';
+      if (gearlogo)       gearlogo.style.transform       = deg;
+      if (mobileGearlogo) mobileGearlogo.style.transform = deg;
       running = false;
     });
   });
