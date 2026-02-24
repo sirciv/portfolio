@@ -18,9 +18,9 @@ html, body {
 
 .container {
   display: grid;
-  width: 100vw;
+  width: 100%;
   height: auto;
-  grid-template-columns: 400px 1fr 2fr;
+  grid-template-columns: 380px 1fr 2fr;
   grid-template-rows: auto;
   grid-gap: 0;
   grid-template-areas: "sidebar content-1 content-2";
@@ -38,10 +38,24 @@ html, body {
 
 /* ── C2. CONTENT AREAS ──────────────────────────────────────── */
 
+.content-2 h4 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-right: 0;
+}
+
+.bio-answer {
+  font-family: 'Inter', sans-serif;
+  margin-top: 0;
+  margin-bottom: 22px;
+  margin-right: 0;
+}
+
 .content-1 {
   grid-area: content-1;
-  margin-top: 100px;
-  padding: 50px;
+  margin-top: 140px;
+  padding-left: 80px;
 }
 
 .content-1 pre {
@@ -55,7 +69,8 @@ html, body {
 
 .content-2 {
   grid-area: content-2;
-  margin-top: 80px;
+  padding: 0 90px;
+  margin-top: 110px;
   margin-bottom: 100px;
 }
 

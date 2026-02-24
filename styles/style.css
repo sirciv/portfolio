@@ -171,7 +171,7 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 400px;
+  width: 380px;
   height: 100vh;
   z-index: 3;
   /* Orange bar on left viewport edge */
@@ -206,7 +206,7 @@ a:hover {
 
 #sidebar_content {
   position: absolute;
-  left: 14px;
+  left: 11px;
   top: 165px;
   color: #c8dbbe;
   font-family: 'IBM Plex Mono', monospace;
