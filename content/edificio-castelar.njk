@@ -1,0 +1,64 @@
+---
+layout: base.njk
+title: Spencer Allan — Edificio Castelar Redesign
+pageType: content
+keywords: ARUP, Northwestern, architecture, Edificio Castelar, spencer allan
+galleryHeight: 160
+gallery:
+  - src: /assets/images/castelar/castelar-1.jpg
+    alt: Portrait view of the Castelar building facade
+    width: 574
+    height: 850
+    scale: 38
+    x: 2
+    y: 0
+    z: 3
+  - src: /assets/images/castelar/castelar-3.png
+    alt: Castelar facade detail
+    width: 1122
+    height: 760
+    scale: 55
+    x: 38
+    y: 5
+    z: 2
+  - src: /assets/images/castelar/ARUP-1.png
+    alt: Rhino geometry and shadow study
+    width: 1500
+    height: 1125
+    scale: 50
+    x: 2
+    y: 65
+    z: 4
+    caption: 'The original geometry and shadow study was conducted using Rhino'
+  - src: /assets/images/castelar/ARUP-3.jpg
+    alt: ARUP facade analysis
+    width: 1500
+    height: 1125
+    scale: 48
+    x: 48
+    y: 52
+    z: 1
+  - src: /assets/images/castelar/castelar-4.png
+    alt: Final facade proposal
+    width: 2593
+    height: 1728
+    scale: 60
+    x: 5
+    y: 108
+    z: 5
+---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
+<div class="project-header">
+  <h2>A Sustainable Facade for the Castelar Building</h2>
+  <span class="project-year">2019</span>
+</div>
+
+<div class="project-body">
+  <p>The Castelar Building is one of the modernist icons of Madrid. Built in the mid-70's as Spain was transitioning into a democracy, the building's elegant double glass envelope, travertine cladding, and cantilevering tower gives the entire space a feeling of transparency and weightlessness.</p>
+  <p>The goal of this project was to reduce the energy requirements of el Castelar by redeveloping its facade in a sustainable way. Our proposal was developed over a week in the ARUP Madrid offices. It utilizes the Arabic vernacular concept of the mashrabiya, a geometric wood sunshade commonly found in parts of Spain, to create an ornate facade that achieved the environmental mission of the redesign.</p>
+  <p>A lot of our research was inspired by field studies in places like Sevilla, Granada, and Segovia. We also drew on the research of architect Aida Shafei, who proposed adapting mashrabiya as a passive cooling solution that also reflects the cultural legacy of its region.</p>
+</div>
+
+<div class="project-gallery">
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
+</div>

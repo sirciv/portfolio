@@ -1,0 +1,99 @@
+---
+layout: base.njk
+title: Spencer Allan — Evanston 5th Ward School
+pageType: content
+keywords: Northwestern, architecture, spencer allan, emerson, evanston
+galleryHeight: 175
+gallery:
+  - src: /assets/images/emerson-school/emerson-1.jpg
+    alt: Aerial rendering of the school site
+    width: 4001
+    height: 2251
+    scale: 65
+    x: 20
+    y: 70
+    z: 5
+  - src: /assets/images/emerson-school/emerson-33.png
+    alt: Exterior rendering
+    width: 4100
+    height: 2345
+    scale: 45
+    x: 0
+    y: 0
+    z: 3
+  - src: /assets/images/emerson-school/emerson-37.png
+    alt: Exterior rendering 2
+    width: 4101
+    height: 2345
+    scale: 48
+    x: 50
+    y: 115
+    z: 4
+  - src: /assets/images/emerson-school/emerson-34.png
+    alt: Section drawing
+    width: 4100
+    height: 2345
+    scale: 45
+    x: 50
+    y: 0
+    z: 2
+  - src: /assets/images/emerson-school/emerson-29.png
+    alt: Floor plan
+    width: 2051
+    height: 1173
+    scale: 48
+    x: 0
+    y: 115
+    z: 6
+  - src: /assets/images/emerson-school/emerson-sketch-1.jpg
+    alt: Site sketch 1
+    width: 3785
+    height: 2449
+    scale: 50
+    x: 0
+    y: 30
+    z: 7
+  - src: /assets/images/emerson-school/emerson-sketch-2.jpg
+    alt: Site sketch 2
+    width: 1928
+    height: 1368
+    scale: 40
+    x: 55
+    y: 30
+    z: 1
+  - src: /assets/images/emerson-school/emerson-30.png
+    alt: Site plan 2
+    width: 2050
+    height: 1173
+    scale: 48
+    x: 0
+    y: 148
+    z: 8
+  - src: /assets/images/emerson-school/emerson-35.png
+    alt: Interior perspective
+    width: 4101
+    height: 2345
+    scale: 48
+    x: 50
+    y: 148
+    z: 9
+---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
+<div class="project-header">
+  <h2>Designing an Elementary School for Evanston's 5th Ward</h2>
+  <span class="project-year">2022</span>
+</div>
+
+<div class="project-body">
+<p>The 5th Ward of Evanston has long faced disinvestment—limited green space, environmental concerns, and until recently, no neighborhood elementary school. In 2022, when District 65 began exploring a new school on a vacant industrial site on Emerson Street, I proposed a design that treated the building and landscape as one continuous system.</p>
+
+<p>The site was only a few blocks from my own home. On my walk over, I noticed the abandoned and overgrown Pacific Union railway viaduct—now part of the Weber Spur Trail initiative. This became the project’s organizing move. I shaped a circular berm that loops up to meet the future trail, extending it into a public park that doubles as outdoor learning space. The school is set six feet below grade, shielded by a 15-foot berm to the south, with a green roof that aligns to the surrounding prairie so the building reads as landscape rather than object.</p>
+
+<p>Working with architects at Studio Gang and STL, and consulting with Professor David Corr at Northwestern University, I developed a cross-laminated timber structure capable of supporting the living roof and confirmed the berm could be formed entirely from on-site material. A skylight generated through a Fibonacci-based algorithm brings controlled daylight into the commons.</p>
+
+<p>Inspired in part by Crow Island School, each classroom steps toward the landscape, includes a reading nook, and opens directly outdoors. The result is a school embedded in its site—structurally, environmentally, and spatially—designed to function as both civic infrastructure and everyday learning environment.</p>
+</div>
+
+<div class="project-gallery">
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
+</div>

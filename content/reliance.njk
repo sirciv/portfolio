@@ -1,0 +1,77 @@
+---
+layout: base.njk
+title: Spencer Allan — Reliance
+pageType: content
+keywords: reliance building, chicago, architecture, spencer allan
+galleryHeight: 190
+gallery:
+  - src: /assets/images/reliance/facade-A-comp.jpg
+    alt: Reliance Building facade study A
+    width: 1382
+    height: 2074
+    scale: 30
+    x: 5
+    y: 138
+    z: 1
+  - src: /assets/images/reliance/facade-B-comp.jpg
+    alt: Reliance Building facade study B
+    width: 1360
+    height: 2041
+    scale: 40
+    x: 5
+    y: 0
+    z: 2
+  - src: /assets/images/reliance/facade-C-comp.jpg
+    alt: Reliance Building facade study C
+    width: 1360
+    height: 2041
+    scale: 40
+    x: 50
+    y: 0
+    z: 3
+  - src: /assets/images/reliance/facade-D-comp.jpg
+    alt: Reliance Building facade study D
+    width: 1360
+    height: 2041
+    scale: 25
+    x: -2
+    y: 80
+    z: 4
+  - src: /assets/images/reliance/facade-E-comp.jpg
+    alt: Reliance Building facade study E
+    width: 1360
+    height: 2041
+    scale: 40
+    x: 28
+    y: 70
+    z: 5
+  - src: /assets/images/reliance/facade-F-comp.jpg
+    alt: Reliance Building facade study F
+    width: 1360
+    height: 2041
+    scale: 25
+    x: 73
+    y: 80
+    z: 6
+  - src: /assets/images/reliance/facade-G-comp.jpg
+    alt: Reliance Building facade study G
+    width: 1360
+    height: 2041
+    scale: 30
+    x: 60
+    y: 138
+    z: 7
+---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
+<div class="project-header">
+  <h2>"Reliance"</h2>
+  <span class="project-year">2024</span>
+</div>
+
+<div class="project-body">
+  <p>The Reliance Building (Root and Atwood, 1895) was the first tall building in the world to dissolve masonry into glass. This photographic study revisits that breakthrough through layered analog and digital processes. Using in-camera double and triple exposures alongside digital compositing, I fragment and recombine the façade, collapsing 1895 into present, contemporary architecture.</p>
+</div>
+
+<div class="project-gallery">
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
+</div>

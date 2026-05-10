@@ -1,0 +1,62 @@
+---
+layout: base.njk
+title: Spencer Allan — Untitled Stanford
+pageType: content
+keywords: stanford, art history, graphic design, publication, spencer allan
+galleryHeight: 95
+gallery:
+  - src: /assets/images/stanford/stanford-spread-15.jpg
+    alt: Stanford art history journal spread
+    width: 2551
+    height: 1651
+    scale: 45
+    x: 0
+    y: 0
+    z: 3
+    caption: '<b>Lorem ipsum dolor (1933)</b><br>Color photograph<br>12 x 10'
+  - src: /assets/images/stanford/stanford-spread-12.jpg
+    alt: Stanford art history journal spread 2
+    width: 2551
+    height: 1651
+    scale: 45
+    x: 48
+    y: 0
+    z: 1
+  - src: /assets/images/stanford/stanford-spread-13.jpg
+    alt: Stanford art history journal spread 3
+    width: 2551
+    height: 1651
+    scale: 45
+    x: 0
+    y: 33
+    z: 2
+  - src: /assets/images/stanford/stanford-spread-14.jpg
+    alt: Stanford art history journal spread 4
+    width: 2551
+    height: 1651
+    scale: 45
+    x: 48
+    y: 33
+    z: 4
+  - src: /assets/images/stanford/stanford-spread-16.jpg
+    alt: Stanford art history journal spread 5
+    width: 2551
+    height: 1651
+    scale: 45
+    x: 0
+    y: 66
+    z: 5
+---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
+<div class="project-header">
+  <h2>Stanford Undergraduate Art History Journal</h2>
+  <span class="project-year">2021</span>
+</div>
+
+<div class="project-body">
+  <p>I designed these spreads for Stanford University's art history department, which published a small magazine featuring student's research and writing. Academic content can be dense, so my focus with the magazine was to let the featured art breath as much as possible. A common trick I used was sampling colors from the artwork itself, which helped the spreads be minimal yet immersive. Between each piece is a poem in five parts, only resolving at the zine's final acknowledgments.</p>
+</div>
+
+<div class="project-gallery">
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
+</div>

@@ -1,3 +1,5 @@
+// snake game easter egg
+
 class SnakeGame {
 
   init() {
@@ -224,7 +226,7 @@ class SnakeGame {
     // this.ctx.fillRect(x, y, size, size);
 
     var img = new Image;
-    img.src = "../icons/snake-icon.png";
+    img.src = "../assets/icons/snake-icon.png";
     this.ctx.drawImage(img, x, y, size, size);
     
 

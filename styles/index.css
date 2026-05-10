@@ -1,0 +1,137 @@
+/* ============================================================
+   index.css, homepage styling
+   spencer allan
+
+   A1. Grid layout
+   A2. Index gallery (justified rows)
+   A3. Mobile
+   A4. Snake game
+   (tooltip styles moved to freeform-gallery.css)
+   ============================================================ */
+
+
+/* ── A1. CSS GRID ───────────────────────────────────────────── */
+
+.container {
+  display: grid;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  grid-template-areas: "sidebar content-1";
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content-1 {
+  grid-area: content-1;
+  position: relative;
+}
+
+
+/* ── A2. INDEX GALLERY ──────────────────────────────────────── */
+
+/* Padding wrapper for the freeform gallery on the homepage.
+   The freeform-gallery.css handles the actual scattered layout. */
+.index-gallery {
+  padding: 40px 50px 80px;
+  overflow: visible;
+}
+
+.entry {
+  position: relative;
+  /* No overflow:hidden — tooltips at bottom:110% need to escape upward */
+  /* width + height set by justifiedLayout() in index.js */
+}
+
+.entry a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.entry img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.1s;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.entry img:hover,
+.entry video:hover {
+  filter: brightness(1.08);
+}
+
+/* Non-link entries (e.g. snake easter egg) */
+.freeform-item[onclick] {
+  cursor: pointer;
+}
+
+/* Manual-width entries show natural height — no cropping */
+.entry[data-w] img {
+  height: auto;
+  object-fit: unset;
+}
+
+/* Paper / desk effect: subtle shadow for rotated entries */
+.entry[data-rotate] {
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.13);
+  position: relative;
+  z-index: 1;
+}
+
+/* Stacked entries sit on top of neighbours */
+.entry[data-mt] {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── A4. MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 1200px) {
+
+  .container {
+    grid-template-columns: 100vw;
+    grid-template-areas: "content-1";
+  }
+
+  .index-gallery {
+    padding: 16px 16px 60px;
+  }
+
+  .freeform-item[onclick] {
+    display: none;
+  }
+
+}
+
+
+/* ── A5. SNAKE GAME ─────────────────────────────────────────── */
+
+.app {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.app .score {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  color: green;
+  font: normal 65px 'Press Start 2P', cursive;
+  overflow: hidden;
+  user-select: none;
+}

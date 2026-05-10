@@ -1,0 +1,106 @@
+---
+layout: base.njk
+title: Spencer Allan — The "1, 2, 3" House
+pageType: content
+keywords: Northwestern, architecture, spencer allan, haven, evanston
+galleryHeight: 185
+gallery:
+  - src: /assets/images/haven/haven-29.png
+    alt: Floorplan of the 1,2,3 House
+    width: 2774
+    height: 1944
+    scale: 82
+    x: 2
+    y: 0
+    z: 5
+    caption: 'A floorplan of the house, showing the progression of movement through the public, semi-public, and private spaces. The narrow plot, which was open to an adjacent parking lot, required special consideration when creating the space.'
+  - src: /assets/images/haven/haven-11.png
+    alt: Aerial model of the project site
+    width: 2999
+    height: 1175
+    scale: 60
+    x: 5
+    y: 62
+    z: 4
+    caption: 'Aerial model of the project site, facing southeast'
+  - src: /assets/images/haven/haven-46.png
+    alt: Program schematic
+    width: 2124
+    height: 1198
+    scale: 48
+    x: 50
+    y: 12
+    z: 3
+    caption: 'Program schematic (Revit)'
+  - src: /assets/images/haven/new-elevation.png
+    alt: Initial project proposal elevation
+    width: 2277
+    height: 1328
+    scale: 52
+    x: 44
+    y: 43
+    z: 2
+    caption: 'Initial project proposal. Because lines of sight were a critical consideration, the house was designed in elevation first.'
+  - src: /assets/images/haven/haven-12.png
+    alt: Physical model of the project
+    width: 2135
+    height: 1198
+    scale: 44
+    x: 2
+    y: 92
+    z: 6
+    caption: 'The physical model for the project was laser cut directly from the digital model using a custom written script.'
+  - src: /assets/images/haven/haven-solo-08.png
+    alt: Entry sequence drawing 1 of 2
+    width: 1320
+    height: 959
+    scale: 38
+    x: 48
+    y: 88
+    z: 1
+    caption: '(1/2) Drawings demonstrating the entry sequence to the house. The interior of the house only reveals itself when someone gets closer to the front door. (Revit)'
+  - src: /assets/images/haven/haven-solo-48.png
+    alt: Entry sequence drawing 2 of 2
+    width: 1320
+    height: 959
+    scale: 35
+    x: 62
+    y: 115
+    z: 7
+    caption: '(2/2) Drawings demonstrating the entry sequence to the house. The interior of the house only reveals itself when someone gets closer to the front door. (Revit)'
+  - src: /assets/images/haven/haven-solo-09.png
+    alt: Interior rendering of kitchen 1 of 2
+    width: 1271
+    height: 897
+    scale: 38
+    x: 2
+    y: 122
+    z: 8
+    caption: '(1/2) Interior renderings of the kitchen and dining spaces. Because the east wall faces a parking lot, sunlight and outdoor space instead comes from an interior courtyard. (Revit)'
+  - src: /assets/images/haven/haven-solo-49.png
+    alt: Interior rendering of kitchen 2 of 2
+    width: 1271
+    height: 897
+    scale: 38
+    x: 44
+    y: 148
+    z: 9
+    caption: '(2/2) Interior renderings of the kitchen and dining spaces. Because the east wall faces a parking lot, sunlight and outdoor space instead comes from an interior courtyard. (Revit)'
+---
+{% from "macros/freeform-gallery.njk" import freeformGallery %}
+<div class="project-header">
+  <h2>The "1, 2, 3" House and Designing for Privacy</h2>
+  <span class="project-year">2026</span>
+</div>
+
+<div class="project-body">
+  <p>The design of a house for 617 Haven Street in the north Chicago suburb of Evanston, IL represented a significant challenge in maintaining client privacy while maximizing sunlight and usable green space.</p>
+  <p>The site is located a block away from Northwestern University's largest academic building. While the views to the south and west were private and tree-covered, the north and east sides of the house were completely exposed to a university parking lot. That lot, plus traffic from nearby Sheridan Road, were major sources of noise pollution and made privacy a significant concern.</p>
+  <p>I knew from the first sketch that the house should be a single story, as building it higher would expose it to the major road. I then sorted the rooms into three distinct zones (inspired by the schematics of Chicago architect Bertrand Goldberg). Public areas are potentially visible to the street, such as foyers and the south-facing sunroom. Semi-public areas include the kitchen and dining areas and should be less visible. Finally, private areas like the bedrooms and studies should be completely protected from view.</p>
+  <p>To make the house feel larger and break-up sight lines, the house is experienced as "three rotations," where with each rotation the space becomes more private. First, a delayed entrance to the house, with a front door that isn't visible from the street. Second, on entering the foyer, another turn: go right to enter the public-facing sunroom or left to enter the kitchen and dining area. Third, while standing in the kitchen, a choice to either enter the south-side of the private volume with the kids' bedrooms or the north-side with the master suite.</p>
+  <p>When architect Larry Booth, principal of Booth Hansen, looked at my final floor plans, he pointed at them with the back of his pen and proclaimed "One, two, three. Works for me!"  The finished "1, 2, 3 House" provides all the amenities expected in a family residence: en-suite bathrooms, a private office, a Chicago-style sunroom, and a generous amount of green-space while preserving privacy on a small and exposed site.</p>
+</div>
+
+<div class="project-gallery">
+  {{ freeformGallery(gallery, { photoswipe: true, height: galleryHeight }) }}
+</div>

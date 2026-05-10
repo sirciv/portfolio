@@ -1,0 +1,131 @@
+/* ============================================================
+   about.css, about page styling
+   spencer allan
+
+   C1. Grid layout
+   C2. Content areas
+   C3. Mobile
+   ============================================================ */
+
+
+/* ── C1. GRID LAYOUT ────────────────────────────────────────── */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 380px 1fr 2fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  grid-template-areas: "sidebar content-1 content-2";
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+#sidebar_content {
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+}
+
+
+/* ── C2. CONTENT AREAS ──────────────────────────────────────── */
+
+.content-2 h4 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-right: 0;
+}
+
+.bio-answer {
+  font-family: 'Inter', sans-serif;
+  margin-top: 0;
+  margin-bottom: 22px;
+  margin-right: 0;
+}
+
+.content-1 {
+  grid-area: content-1;
+  margin-top: 140px;
+  padding-left: 80px;
+}
+
+.content-1 pre {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.content-2 {
+  grid-area: content-2;
+  padding: 0 90px;
+  margin-top: 110px;
+  margin-bottom: 100px;
+}
+
+table {
+  width: 80%;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  border-collapse: collapse;
+}
+
+table img {
+  max-width: 25px !important;
+  max-height: 25px !important;
+  vertical-align: middle;
+}
+
+table td {
+  padding: 4px 10px 4px 0;
+  vertical-align: middle;
+}
+
+
+/* ── C3. MOBILE ─────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+
+  .container {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "content-2"
+      "content-1";
+  }
+
+  .content-2 {
+    padding: 24px;
+    margin: 0;
+    width: auto;
+  }
+
+  .content-2 img {
+    min-width: 80%;
+  }
+
+  .content-1 {
+    padding: 24px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+}

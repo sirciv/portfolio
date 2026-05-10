@@ -1,0 +1,64 @@
+<a href="/content/about/" class="sidebar-info{% if page.url == '/content/about/' %} active{% endif %}">about</a>
+<button class="mobile-close-btn" onclick="document.body.classList.remove('menu-open')" aria-label="Close menu">✕</button>
+
+<div class="top_corner">
+  <img src="/assets/icons/top_corner.svg" id="top_corner_image" alt="" eleventy:ignore>
+  {% if isHomepage %}
+  <a onclick="scrollToTop(150)" style="cursor:pointer; display:inline-block; position:absolute; top:28px; left:28px;">
+    <img src="/assets/icons/logo.svg" id="gearlogo_noflash" alt="Spencer Allan" eleventy:ignore>
+  </a>
+  {% else %}
+  <a href="/">
+    <img src="/assets/icons/logo.svg" id="gearlogo" alt="Spencer Allan" eleventy:ignore>
+    <img src="/assets/icons/back_arrow.svg" id="backarrow" alt="Back to home" eleventy:ignore>
+  </a>
+  {% endif %}
+</div>
+
+<nav id="sidebar_content">
+  <a href="/content/edificio-castelar/" class="nav-item{% if page.url == '/content/edificio-castelar/' %} active{% endif %}">
+    <span class="nav-circle"></span>
+    <span>Edificio Castelar</span>
+    <span class="nav-category">Architecture</span>
+  </a>
+  <a href="/content/emerson/" class="nav-item{% if page.url == '/content/emerson/' %} active{% endif %}">
+    <span class="nav-circle"></span>
+    <span>5th Ward School</span>
+    <span class="nav-category">Architecture</span>
+  </a>
+  <a href="/content/reliance/" class="nav-item{% if page.url == '/content/reliance/' %} active{% endif %}">
+    <span class="nav-circle"></span>
+    <span>Reliance</span>
+    <span class="nav-category">Photography</span>
+  </a>
+  <a href="/content/mca-world-radio/" class="nav-item{% if page.url == '/content/mca-world-radio/' %} active{% endif %}">
+    <span class="nav-circle"></span>
+    <span>World Radio</span>
+    <span class="nav-category">Sculpture</span>
+  </a>
+  <a href="/content/haven/" class="nav-item{% if page.url == '/content/haven/' %} active{% endif %}">
+    <span class="nav-circle"></span>
+    <span>"1, 2, 3" House</span>
+    <span class="nav-category">Architecture</span>
+  </a>
+  <a href="/content/tartan-66/" class="nav-item{% if page.url == '/content/tartan-66/' %} active{% endif %}">
+    <span class="nav-circle"></span>
+    <span>Tartan Issue 66</span>
+    <span class="nav-category">Graphic Design</span>
+  </a>
+  <a href="/content/tartan-67/" class="nav-item{% if page.url == '/content/tartan-67/' %} active{% endif %}">
+    <span class="nav-circle"></span>
+    <span>Tartan Issue 67</span>
+    <span class="nav-category">Graphic Design</span>
+  </a>
+  <a href="https://gbdmagazine.com/noll-tam/" class="nav-item" target="_blank" rel="noopener">
+    <span class="nav-circle"></span>
+    <span>Noll &amp; Tam ↗</span>
+    <span class="nav-category">Writing</span>
+  </a>
+  <a href="/content/untitled-stanford/" class="nav-item{% if page.url == '/content/untitled-stanford/' %} active{% endif %}">
+    <span class="nav-circle"></span>
+    <span>Untitled Stanford</span>
+    <span class="nav-category">Graphic Design</span>
+  </a>
+</nav>

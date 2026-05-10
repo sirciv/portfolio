@@ -1,0 +1,445 @@
+/* ============================================================
+   spencer's very cool stylesheet! rev. 2026
+   ============================================================ */
+
+/* 1. GLOBAL
+   2. TYPOGRAPHY
+   3. LINKS
+   4. TOP CORNER / ASTERISK LOGO
+   5. SIDEBAR
+   6. SIDEBAR NAVIGATION (circles + categories)
+   7. FOOTER
+   8. MOBILE
+   ============================================================ */
+
+
+/* ── 1. GLOBAL ─────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior-y: none;
+  background-color: #eff5f5;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+body {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  background-color: #eff5f5;
+}
+
+
+/* ── 2. TYPOGRAPHY ──────────────────────────────────────────── */
+
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  color: #333;
+}
+
+h2 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  color: #F6873D;
+  line-height: 1.45;
+}
+
+h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.4vw;
+  margin: 0;
+}
+
+h5 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85vw;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-right: 35%;
+  margin-bottom: 22px;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+::selection {
+  background: orange;
+}
+::-moz-selection {
+  background: orange;
+}
+
+
+/* ── 3. LINKS ───────────────────────────────────────────────── */
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #F6873D;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+/* ── 4. TOP CORNER / ASTERISK LOGO ─────────────────────────── */
+
+.top_corner {
+  z-index: 4;
+  position: fixed;
+  width: 440px;
+  pointer-events: all;
+}
+
+/* Hide the decorative frame — asterisk sits directly on dark green */
+#top_corner_image {
+  display: none;
+}
+
+/* Homepage (no back arrow) — parent <a> handles placement */
+/* I hate the way this is implemented, need to find better solution. */
+#gearlogo_noflash {
+  display: block;
+  height: 100px;
+  width: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Content / about pages */
+#gearlogo {
+  position: absolute;
+  height: 100px;
+  width: auto;
+  top: 28px;
+  left: 28px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#backarrow {
+  position: absolute;
+  height: 95px;
+  width: auto;
+  top: 36px;
+  left: 28px;
+  display: none;
+}
+
+.top_corner:hover #backarrow {
+  display: inline-block;
+}
+
+.top_corner:hover #gearlogo {
+  display: none;
+}
+
+
+/* ── 5. SIDEBAR ─────────────────────────────────────────────── */
+
+.sidebar {
+  background-color: #405c35;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 100vh;
+  z-index: 3;
+  /* Orange bar on left viewport edge */
+  border-left: 10px solid #F6873D;
+  /* Light green accent bar at top (from original SVG design) */
+  border-top: 10px solid #88ca89;
+}
+
+/* "about" link, anchored top-right of sidebar header */
+.sidebar-info {
+  position: absolute;
+  top: 34px;
+  right: 30px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #c8dbbe;
+  text-decoration: none;
+  transition: color 0.1s;
+  z-index: 5;
+  pointer-events: all;
+}
+
+.sidebar-info:link,
+.sidebar-info:visited {
+  color: #c8dbbe;
+}
+
+.sidebar-info:hover,
+.sidebar-info.active {
+  color: #F6873D;
+}
+
+#sidebar_content {
+  position: absolute;
+  left: 11px;
+  top: 165px;
+  color: #c8dbbe;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  width: calc(100% - 48px);
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+
+/* ── 6. SIDEBAR NAVIGATION (circles + categories) ──────────── */
+
+.nav-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+  text-decoration: none;
+  color: #c8dbbe;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  line-height: 1.35;
+  transition: color 0.1s;
+}
+
+.nav-circle {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  background: transparent;
+  transition: border-color 0.1s, background 0.1s;
+}
+
+/* Suppress ALL transitions during initial page paint.
+   Prevents nav circles and sidebar text from flashing their transition
+   states while the browser is doing its first style/layout pass.
+   gallery.js / index.js strips this class after the first paint frame
+   so all hover and active interactions work normally thereafter. */
+.preload * {
+  transition: none !important;
+}
+
+/* Current page: filled orange circle */
+.nav-item.active .nav-circle {
+  background: #F6873D;
+  border-color: #F6873D;
+}
+
+/* Hover: empty light outline */
+.nav-item:hover .nav-circle {
+  border-color: rgba(200, 219, 190, 0.5);
+}
+
+.nav-item:link,
+.nav-item:visited {
+  color: #c8dbbe;
+}
+
+.nav-item:hover {
+  color: #c8dbbe;
+}
+
+.nav-category {
+  font-style: italic;
+  color: rgba(200, 219, 190, 0.5);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.nav-spacer {
+  height: 10px;
+}
+
+/* ── 7. FOOTER ──────────────────────────────────────────────── */
+
+#bottom-message {
+  color: #1b1b1b;
+  position: fixed;
+  bottom: 20px;
+  right: 1.5vw;
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+
+/* ── 8. MOBILE ──────────────────────────────────────────────── */
+
+/* Hidden on desktop — only appear on mobile */
+.mobile-topbar    { display: none; }
+.mobile-overlay   { display: none; }
+.mobile-close-btn { display: none; }
+
+@media (max-width: 1200px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* ── Mobile topbar ─── */
+
+  .mobile-topbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    background-color: #eff5f5;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  /* Tiny asterisk — top-left, no back-arrow hover */
+  .mobile-logo-link {
+    position: absolute;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    pointer-events: all;
+  }
+
+  .mobile-logo-link img {
+    height: 30px;
+    width: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  /* INDEX toggle button — centered */
+  .mobile-index-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    padding: 0;
+    transition: color 0.1s;
+  }
+
+  .mobile-index-btn:hover {
+    color: #F6873D;
+  }
+
+  /* ── Sidebar — slides in from left ─── */
+
+  /* Always in DOM on mobile, off-screen by default */
+  .sidebar {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: min(440px, 92vw) !important;
+    height: 100vh !important;
+    z-index: 200 !important;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Slide into view when menu is open */
+  body.menu-open .sidebar {
+    transform: translateX(0);
+  }
+
+  /* Nav position on mobile — no giant asterisk taking space */
+  #sidebar_content {
+    top: 70px;
+    max-height: calc(100vh - 80px);
+  }
+
+  /* ── Overlay backdrop — fades in ─── */
+
+  .mobile-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 150;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  body.menu-open .mobile-overlay {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* ── Close button inside sidebar (mobile only) ─── */
+
+  .mobile-close-btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    background: none;
+    border: none;
+    color: #c8dbbe;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 210;
+    padding: 0;
+    transition: color 0.1s;
+  }
+
+  .mobile-close-btn:hover {
+    color: #F6873D;
+  }
+
+  /* Hide the desktop fixed logo — mobile topbar has its own */
+  .top_corner {
+    display: none !important;
+  }
+
+  /* Offset content below the fixed topbar */
+  body {
+    padding-top: 52px !important;
+  }
+
+  .footer {
+    display: none;
+  }
+
+}
